@@ -82,7 +82,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .tarjetaProfe.dos { top: 230px; left: 290px; transform: rotate(8deg); }
 .tarjetaProfe .cabeza { display: grid; grid-template-columns: 130px 1fr; gap: 1.5rem; align-items: center; }
 .tarjetaProfe img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; }
-.tarjetaProfe h3 { font-family: var(--fMarca); font-weight: 700; font-size: 2.1rem; color: #000; }
+.tarjetaProfe h2 { font-family: var(--fMarca); font-weight: 700; font-size: 2.1rem; color: #000; }
 .tarjetaProfe .materia { display: block; margin-top: .6rem; padding: .55rem 1.2rem; border-radius: 999px; background: var(--coral); color: #fff; font-size: 1.3rem; box-shadow: var(--sombraPill); }
 .tarjetaProfe .descripcion { margin-top: 1.25rem; padding-bottom: 1.1rem; border-bottom: 1.5px solid #222; font-size: 1.2rem; line-height: 1.25; }
 .tarjetaProfe .pie { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 1.15rem; }
@@ -114,7 +114,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .grilla3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .card { background: #fff; border: 1px solid var(--borde); border-radius: 1.4rem; box-shadow: var(--sombraCard); padding: 36px; }
-.card h3 { font-family: var(--fMarca); font-weight: 700; font-size: 1.6rem; color: var(--titulo); }
+.card h2, .card h3 { font-family: var(--fMarca); font-weight: 700; font-size: 1.6rem; color: var(--titulo); }
 .card p { color: var(--textoSuave); font-size: 1.05rem; }
 
 /* Pasos */
@@ -189,7 +189,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .cuadro.c1 { background: var(--coralSuave); color: var(--coral); }
 .cuadro.c2 { background: var(--celesteSuave); color: #0E7490; }
 .cuadro.c3 { background: #E8F1FB; color: var(--tinta); }
-.ayudas h3 { margin-bottom: 1rem; }
+.ayudas h2 { margin-bottom: 1rem; }
 .ayudas .enlace { display: inline-block; margin-top: 1.1rem; font-size: 1.1rem; }
 
 .faq { display: grid; grid-template-columns: 280px 1fr; gap: 48px; width: min(1240px, 100% - 32px); }
@@ -261,7 +261,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
     .tarjetaProfe { position: static; width: auto; transform: none !important; padding: 1.5rem; }
     .tarjetaProfe .cabeza { grid-template-columns: 80px 1fr; gap: 1rem; }
     .tarjetaProfe img { width: 80px; height: 80px; }
-    .tarjetaProfe h3 { font-size: 1.5rem; }
+    .tarjetaProfe h2 { font-size: 1.5rem; }
     .tarjetaProfe .materia, .tarjetaProfe .descripcion, .tarjetaProfe .pie { font-size: 1rem; }
     .seccion { padding: 56px 0; }
     .card, .panel { padding: 28px; }

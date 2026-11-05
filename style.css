@@ -249,7 +249,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
     .encabezado .contenedor { min-height: 72px; }
     .marca { font-size: 1.35rem; }
     .marca img { width: 44px; height: 44px; }
-    .acciones .boton { padding: .55rem .9rem; font-size: .9rem; }
+    .encabezado .contenedor { gap: .75rem; }
+    .acciones { gap: .5rem; }
+    .acciones .boton { padding: .5rem .75rem; font-size: .85rem; }
     .acciones .boton .texto { display: none; }
     .botonLupa, .avatar { width: 40px; height: 40px; }
     .hero { padding-top: 40px; }
@@ -266,6 +268,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
     .formulario { grid-template-columns: 1fr; padding: 28px; }
     .piePagina .columnas { grid-template-columns: 1fr; }
     .heroSoporte { padding: 64px 0 150px; }
+}
+@media (max-width: 440px) {
+    .encabezado .marca > span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }

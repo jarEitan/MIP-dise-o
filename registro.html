@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creá tu cuenta · MiProfesor</title>
+    <meta name="description" content="Creá tu cuenta gratis en MiProfesor como alumno o profesor.">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
+            <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="index.html#para-todos">Quiénes somos</a><a href="soporte.html">Soporte</a></nav>
+            <div class="acciones"><a href="iniciar-sesion.html" class="boton celeste chico">Iniciar Sesión</a><a href="registro.html" class="boton coral chico">Registrarse</a></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="fondoGris acceso">
+            <div class="contenedor">
+                <section class="promo">
+                    <div class="logoCaja"><img src="img/logo.png" alt=""></div>
+                    <h1>Aprender nunca debería depender de la suerte</h1>
+                    <p>Sumate a la comunidad de MiProfesor y encontrá apoyo con docentes que conocen tu colegio.</p>
+                    <ul><li><img class="icono" src="icons/check-coral.svg" alt="">Profesores de tu propio colegio</li><li><img class="icono" src="icons/check-coral.svg" alt="">Clases presenciales o virtuales</li><li><img class="icono" src="icons/check-coral.svg" alt="">Chat directo para coordinar</li><li><img class="icono" src="icons/check-coral.svg" alt="">Sin intermediarios ni costos ocultos</li></ul>
+                    <figure>
+                        <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <blockquote>“En una semana ya tenía profe para Física y aprobé el parcial. Lo recomiendo.”</blockquote>
+                        <figcaption>Valentina, 4º año · ORT Belgrano</figcaption>
+                    </figure>
+                </section>
+                <section class="card cajaForm">
+                    <span class="etiqueta rosa">Es gratis y lleva un minuto</span>
+                    <h1>Creá tu cuenta</h1>
+                    <p>Solo pedimos lo básico. El resto lo completás después, cuando quieras verificar tu cuenta.</p>
+                    <form class="formulario" action="panel.html">
+                        <p class="pasoForm"><span>1</span>¿Cómo vas a usar MiProfesor?</p>
+                        <div class="roles" role="radiogroup" aria-label="Tipo de cuenta">
+                            <label class="rol"><span class="cuadro"><img class="icono" src="icons/user-gris.svg" alt=""></span><span><b>Soy alumno</b><small>Busco un profesor</small></span><input type="radio" name="rol" value="alumno" checked></label>
+                            <label class="rol"><span class="cuadro"><img class="icono" src="icons/message-gris.svg" alt=""></span><span><b>Soy profesor</b><small>Quiero dar clases</small></span><input type="radio" name="rol" value="profesor"></label>
+                        </div>
+                        <p class="pasoForm"><span>2</span>Tus datos</p>
+                        <label>Nombre<input type="text" name="nombre" placeholder="Sofía" required autocomplete="given-name"></label>
+                        <label>Apellido<input type="text" name="apellido" placeholder="Martínez" required autocomplete="family-name"></label>
+                        <label class="ancho">Correo electrónico<input type="email" name="correo" placeholder="nombre@ejemplo.com" required autocomplete="email"></label>
+                        <label class="ancho">Contraseña<input type="password" name="clave" placeholder="Creá una contraseña (mínimo 8 caracteres)" minlength="8" required autocomplete="new-password"></label>
+                        <label class="ancho">Fecha de nacimiento<input type="date" name="nacimiento" required></label>
+                        <label class="casilla ancho"><input type="checkbox" name="terminos" required>Acepto los términos y la política de privacidad</label>
+                        <button type="submit" class="boton coral ancho">Crear mi cuenta</button>
+                        <p class="alternativa">¿Ya tenés cuenta? <a href="iniciar-sesion.html">Iniciá sesión</a></p>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="piePagina">
+        <div class="contenedor">
+            <div class="columnas">
+                <div>
+                    <a href="index.html" class="marca"><img src="img/logo.png" alt="">MiProfesor</a>
+                    <p>Conectando alumnos y docentes para un aprendizaje sin barreras.</p>
+                </div>
+                <div>
+                    <h4>Plataforma</h4>
+                    <ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="catalogo.html#buscar">Buscar</a></li><li><a href="registro.html">Cuentas</a></li></ul>
+                </div>
+                <div>
+                    <h4>Proyecto</h4>
+                    <ul><li><a href="index.html#para-todos">Quiénes somos</a></li><li><a href="soporte.html">Soporte</a></li><li><a href="index.html#equipo">Equipo</a></li></ul>
+                </div>
+                <div id="equipo">
+                    <h4>Desarrolladores</h4>
+                    <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
+                </div>
+            </div>
+            <p class="legal">© 2026 MiProfesor (MIP) · El conocimiento nos conecta.</p>
+        </div>
+    </footer>
+    <script>
+        // Desde "Registrarme como profe" se llega con #profesor
+        if (location.hash === '#profesor') document.querySelector('input[value="profesor"]').checked = true;
+    </script>
+</body>
+</html>

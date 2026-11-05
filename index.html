@@ -12,16 +12,8 @@
     <header class="encabezado">
         <div class="contenedor">
             <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
-            <nav class="menu" aria-label="Principal">
-                <a href="index.html" aria-current="page">Inicio</a>
-                <a href="#destacados">Catálogo</a>
-                <a href="#para-todos">Quiénes Somos</a>
-                <a href="soporte.html">Soporte</a>
-            </nav>
-            <div class="acciones">
-                <a href="#" class="boton celeste chico">Iniciar Sesión</a>
-                <a href="#" class="boton coral chico">Registrarse</a>
-            </div>
+            <nav class="menu" aria-label="Principal"><a href="index.html" aria-current="page">Inicio</a><a href="catalogo.html">Catálogo</a><a href="index.html#para-todos">Quiénes somos</a><a href="soporte.html">Soporte</a></nav>
+            <div class="acciones"><a href="iniciar-sesion.html" class="boton celeste chico">Iniciar Sesión</a><a href="registro.html" class="boton coral chico">Registrarse</a></div>
         </div>
     </header>
 
@@ -55,11 +47,11 @@
                             </div>
                         </div>
                         <p class="descripcion">Clases dinámicas y metodologías de estudio personalizadas para secundarios.</p>
-                        <div class="pie"><span>Presencial - Palermo</span><a href="#" class="boton celeste">Contactar</a></div>
+                        <div class="pie"><span>Presencial - Palermo</span><a href="perfil.html" class="boton celeste">Contactar</a></div>
                     </article>
                 </div>
 
-                <form class="buscador" role="search" action="#">
+                <form class="buscador" role="search" action="catalogo.html">
                     <input type="search" name="materia" placeholder="¿Qué materia querés aprender? (ej. Matemática)" aria-label="Materia">
                     <input type="search" name="zona" placeholder="Colegio o Zona" aria-label="Colegio o zona">
                     <button type="submit" class="boton coral">Buscar</button>
@@ -109,19 +101,19 @@
                         <h2>Conectá con docentes listos para ayudarte</h2>
                         <p class="bajada">Profesores verificados, con reseñas reales de alumnos de tu colegio.</p>
                     </div>
-                    <a href="#" class="enlace">Ver catálogo completo →</a>
+                    <a href="catalogo.html" class="enlace">Ver catálogo completo →</a>
                 </div>
                 <div class="grilla3">
                     <article class="card destacado coral">
-                        <h3>Sofía Martínez</h3>
+                        <h3><a href="perfil.html">Sofía Martínez</a></h3>
                         <p>Acompañamiento escolar para nivel secundario y preparación de exámenes finales.</p>
                     </article>
                     <article class="card destacado celeste">
-                        <h3>Joaquín Gómez</h3>
+                        <h3><a href="catalogo.html">Joaquín Gómez</a></h3>
                         <p>Clases dinámicas y metodologías de estudio personalizadas para secundarios.</p>
                     </article>
                     <article class="card destacado coral">
-                        <h3>Camila Rodríguez</h3>
+                        <h3><a href="catalogo.html">Camila Rodríguez</a></h3>
                         <p>Apoyo integral en gramática, conversación y exámenes internacionales.</p>
                     </article>
                 </div>
@@ -144,7 +136,7 @@
                             <li><img class="icono" src="icons/check-blanco.svg" alt="">Chat directo para coordinar horarios</li>
                             <li><img class="icono" src="icons/check-blanco.svg" alt="">Historial de todas tus clases</li>
                         </ul>
-                        <a href="#" class="boton blanco">Buscar mi profe</a>
+                        <a href="catalogo.html" class="boton blanco">Buscar mi profe</a>
                     </article>
                     <article class="panel tinta">
                         <h3>¿Sos profesor particular?</h3>
@@ -155,7 +147,7 @@
                             <li><img class="icono" src="icons/check-celeste.svg" alt="">Recibí pedidos de clase al instante</li>
                             <li><img class="icono" src="icons/check-celeste.svg" alt="">Verificá tu cuenta y ganá confianza</li>
                         </ul>
-                        <a href="#" class="boton celeste">Registrarme como profe</a>
+                        <a href="registro.html#profesor" class="boton celeste">Registrarme como profe</a>
                     </article>
                 </div>
             </div>
@@ -195,8 +187,8 @@
                     <h2>El conocimiento nos conecta</h2>
                     <p>Creá tu cuenta gratis y encontrá a tu próximo profesor en minutos.</p>
                     <div class="botones">
-                        <a href="#" class="boton coral">Crear mi cuenta gratis</a>
-                        <a href="#destacados" class="boton celeste">Explorar catálogo</a>
+                        <a href="registro.html" class="boton coral">Crear mi cuenta gratis</a>
+                        <a href="catalogo.html" class="boton celeste">Explorar catálogo</a>
                     </div>
                 </div>
             </div>
@@ -212,13 +204,13 @@
                 </div>
                 <div>
                     <h4>Plataforma</h4>
-                    <ul><li><a href="#">Catálogo</a></li><li><a href="#">Buscar</a></li><li><a href="#">Cuentas</a></li></ul>
+                    <ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="catalogo.html#buscar">Buscar</a></li><li><a href="registro.html">Cuentas</a></li></ul>
                 </div>
                 <div>
                     <h4>Proyecto</h4>
-                    <ul><li><a href="#">Quiénes somos</a></li><li><a href="soporte.html">Soporte</a></li><li><a href="#">Equipo</a></li></ul>
+                    <ul><li><a href="index.html#para-todos">Quiénes somos</a></li><li><a href="soporte.html">Soporte</a></li><li><a href="index.html#equipo">Equipo</a></li></ul>
                 </div>
-                <div>
+                <div id="equipo">
                     <h4>Desarrolladores</h4>
                     <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
                 </div>

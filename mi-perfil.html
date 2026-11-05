@@ -7,67 +7,75 @@
     <meta name="description" content="Tu perfil en MiProfesor.">
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
     <header class="encabezado">
         <div class="contenedor">
             <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
             <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="index.html#para-todos">Quiénes somos</a><a href="soporte.html">Soporte</a></nav>
-            <div class="acciones"><span class="chipUsuario">Alumno • ORT Almagro</span><a href="catalogo.html" class="botonLupa" aria-label="Buscar profesores"><img class="icono" src="icons/search-tinta.svg" alt=""></a><a href="panel.html" class="boton coral chico"><img class="icono" src="icons/chart-blanco.svg" alt=""><span class="texto">Panel de Control</span><span class="contador" aria-label="1 novedad">1</span></a><a href="mi-perfil.html" class="avatar" aria-label="Mi perfil">SM</a></div>
+            <div class="acciones">
+                <span class="pildora">Alumno · ORT Almagro</span>
+                <a href="catalogo.html" class="boton botonIcono" aria-label="Buscar profesores"><img class="bi" src="icons/search-tinta.svg" alt=""></a>
+                <a href="panel.html" class="boton principal chico"><img class="bi" src="icons/chart-tinta.svg" alt=""><span>Panel de Control</span><span class="contador" aria-label="1 novedad">1</span></a>
+                <a href="mi-perfil.html" class="avatar" aria-label="Mi perfil">SM</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="portada"></div>
-        <div class="contenedor perfil">
-            <section class="card perfilCabeza">
-                <div class="perfilFila">
-                    <span class="iniciales grande" aria-hidden="true">SM</span>
+        <section class="perfil">
+            <div class="portadaPerfil"></div>
+            <div class="contenedor">
+                <header class="card">
                     <div>
-                        <div class="insignias"><span class="insignia">Alumna</span><span class="insignia verde">✓ Cuenta verificada</span></div>
-                        <h1>Sofía Martínez</h1>
-                        <p class="ubicacion"><span><img class="icono" src="icons/home-gris.svg" alt="">Nacional Buenos Aires · Normal 1</span><span><img class="icono" src="icons/pin-gris.svg" alt="">Palermo, CABA</span></p>
+                        <span class="avatar" aria-hidden="true">SM</span>
+                        <div>
+                            <div><span class="pildora">Alumna</span><span class="badge exito"><img class="bi" src="icons/tilde-exito.svg" alt="">Cuenta verificada</span></div>
+                            <h1>Sofía Martínez</h1>
+                            <p class="ubicacion"><span><img class="bi" src="icons/home-suave.svg" alt="">Nacional Buenos Aires y Normal 1</span><span><img class="bi" src="icons/pin-suave.svg" alt="">Palermo, CABA</span></p>
+                        </div>
                     </div>
-                </div>
-                    <div class="botonesGrandes">
-                        <a href="registro.html" class="boton coral">Editar perfil</a>
-                        <button type="button" class="boton borde" id="copiarEnlace">Copiar enlace</button>
-                        <a href="index.html" class="boton tinta">Cerrar sesión</a>
+                    <div class="acciones">
+                        <a href="registro.html" class="boton principal">Editar perfil</a>
+                        <button type="button" class="boton contorno" data-copiar-enlace>Copiar enlace</button>
+                        <a href="index.html" class="boton oscuro">Cerrar sesión</a>
                     </div>
-                <div class="estadisticas"><div><b>2,4</b><span>Calificación</span></div><div><b>16</b><span>Reseñas</span></div><div><b>67</b><span>Clases tomadas</span></div><div><b>0</b><span>Me gusta</span></div><a href="panel.html#historial" class="boton borde">Ver historial de clases</a></div>
-            </section>
-            <div class="perfilCuerpo">
-                <div>
-                    <section class="card sobreMi"><h2>Sobre mí</h2>
+                    <dl><div><dt>Calificación</dt><dd>2,4</dd></div><div><dt>Reseñas</dt><dd>16</dd></div><div><dt>Clases tomadas</dt><dd>67</dd></div><div><dt>Me gusta</dt><dd>0</dd></div><a href="panel.html#historial" class="boton contorno chico">Ver historial de clases</a></dl>
+                </header>
+                <div class="cuerpo">
+                    <div>
+                        <div class="card"><h2>Sobre mí</h2>
                         <p>Secundario, 5to año.</p>
-                    </section>
-                    <section class="card" id="resenas">
-                        <div class="resenasCabeza"><h2>Reseñas</h2><p class="puntaje"><b>2,4</b><small><span class="estrellasRojas">★★★★★</span>16 reseñas</small></p></div>
-                        <ul class="resenas">
-                            <li><span class="iniciales c2">MR</span><div><p class="quien"><b>Mateo R.</b><span class="estrellasRojas" aria-label="1 de 5 estrellas">★☆☆☆☆</span><small>hace 2 días</small></p><p>Faltó a la clase sin avisar y no respondió el chat.</p></div></li>
-                        </ul>
-                        <a href="#resenas" class="boton borde chico">Ver todas las reseñas</a>
-                    </section>
-                </div>
-                <div>
-                    <section class="card"><h2>Datos</h2>
-                        <ul class="datosPerfil">
-                            <li><span class="cuadro"><img class="icono" src="icons/home-coral.svg" alt=""></span><div><small>Colegio</small>Colegio Nacional de Buenos Aires · Escuela Normal 1</div></li>
-                            <li><span class="cuadro"><img class="icono" src="icons/gear-coral.svg" alt=""></span><div><small>Materias</small><div class="chips"><span class="etiquetaGris coral">Matemática</span><span class="etiquetaGris">Física</span><span class="etiquetaGris">Álgebra</span></div></div></li>
-                            <li><span class="cuadro"><img class="icono" src="icons/user-coral.svg" alt=""></span><div><small>Nivel</small>Secundario, 5to año</div></li>
-                        </ul>
-                    </section>
-                    <a href="soporte.html#contacto" class="reportar"><img class="icono" src="icons/alerta-gris.svg" alt="">Reportar este perfil</a>
+                        </div>
+                        <div class="card" id="resenas">
+                            <div><h2>Reseñas</h2><p class="puntaje"><b>2,4</b><small><span class="estrellas" role="img" aria-label="2 de 5 estrellas"><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-suave.svg" alt=""><img class="bi" src="icons/estrella-suave.svg" alt=""><img class="bi" src="icons/estrella-suave.svg" alt=""></span>16 reseñas</small></p></div>
+                            <ul>
+                            <li class="resena"><span class="avatar celeste">MR</span><div><div><b>Mateo R.</b><span class="estrellas" role="img" aria-label="1 de 5 estrellas"><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-suave.svg" alt=""><img class="bi" src="icons/estrella-suave.svg" alt=""><img class="bi" src="icons/estrella-suave.svg" alt=""><img class="bi" src="icons/estrella-suave.svg" alt=""></span><small>hace 2 días</small></div><p>Faltó a la clase sin avisar y no respondió el chat.</p></div></li>
+                            </ul>
+                            <a href="#resenas" class="boton contorno chico">Ver todas las reseñas</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card"><h2>Datos</h2>
+                            <ul class="datos">
+                            <li><span class="icono"><img class="bi" src="icons/home-magenta.svg" alt=""></span><div><small>Colegio</small>Colegio Nacional de Buenos Aires y Escuela Normal 1</div></li>
+                            <li><span class="icono"><img class="bi" src="icons/gear-magenta.svg" alt=""></span><div><small>Materias</small><div><span class="badge coral">Matemática</span><span class="badge">Física</span><span class="badge">Álgebra</span></div></div></li>
+                            <li><span class="icono"><img class="bi" src="icons/user-magenta.svg" alt=""></span><div><small>Nivel</small>Secundario, 5to año</div></li>
+                            </ul>
+                        </div>
+                        <a href="soporte.html#contacto" class="enlace reportar"><img class="bi" src="icons/alerta-suave.svg" alt="">Reportar este perfil</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="piePagina">
+    <footer class="pie">
         <div class="contenedor">
-            <div class="columnas">
+            <div>
                 <div>
-                    <a href="index.html" class="marca"><img src="img/logo.png" alt="">MiProfesor</a>
+                    <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
                     <p>Conectando alumnos y docentes para un aprendizaje sin barreras.</p>
                 </div>
                 <div>
@@ -83,16 +91,8 @@
                     <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
                 </div>
             </div>
-            <p class="legal">© 2026 MiProfesor (MIP) · El conocimiento nos conecta.</p>
+            <p>© 2026 MiProfesor (MIP). El conocimiento nos conecta.</p>
         </div>
     </footer>
-    <script>
-        // Copiar el enlace del perfil público
-        document.getElementById('copiarEnlace').addEventListener('click', e => {
-            const url = new URL('perfil.html', location.href).href;
-            navigator.clipboard?.writeText(url).then(() => e.currentTarget.title = 'Enlace copiado');
-            e.currentTarget.textContent.trim() && (e.currentTarget.textContent = 'Enlace copiado');
-        });
-    </script>
 </body>
 </html>

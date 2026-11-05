@@ -7,114 +7,118 @@
     <meta name="description" content="Perfil de Sofía Martínez, profesora de Matemática y Física.">
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
     <header class="encabezado">
         <div class="contenedor">
             <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
             <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="index.html#para-todos">Quiénes somos</a><a href="soporte.html">Soporte</a></nav>
-            <div class="acciones"><span class="chipUsuario">Alumno • ORT Almagro</span><a href="catalogo.html" class="botonLupa" aria-label="Buscar profesores"><img class="icono" src="icons/search-tinta.svg" alt=""></a><a href="panel.html" class="boton coral chico"><img class="icono" src="icons/chart-blanco.svg" alt=""><span class="texto">Panel de Control</span><span class="contador" aria-label="1 novedad">1</span></a><a href="mi-perfil.html" class="avatar" aria-label="Mi perfil">SM</a></div>
+            <div class="acciones">
+                <span class="pildora">Alumno · ORT Almagro</span>
+                <a href="catalogo.html" class="boton botonIcono" aria-label="Buscar profesores"><img class="bi" src="icons/search-tinta.svg" alt=""></a>
+                <a href="panel.html" class="boton principal chico"><img class="bi" src="icons/chart-tinta.svg" alt=""><span>Panel de Control</span><span class="contador" aria-label="1 novedad">1</span></a>
+                <a href="mi-perfil.html" class="avatar" aria-label="Mi perfil">SM</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="portada"></div>
-        <div class="contenedor perfil">
-            <section class="card perfilCabeza">
-                <div class="perfilFila">
-                    <span class="iniciales grande" aria-hidden="true">SM</span>
+        <section class="perfil">
+            <div class="portadaPerfil"></div>
+            <div class="contenedor">
+                <header class="card">
                     <div>
-                        <div class="insignias"><span class="insignia">Profesora</span><span class="insignia verde">✓ Cuenta verificada</span></div>
-                        <h1>Sofía Martínez</h1>
-                        <p class="ubicacion"><span><img class="icono" src="icons/home-gris.svg" alt="">Nacional Buenos Aires · Normal 1</span><span><img class="icono" src="icons/pin-gris.svg" alt="">Palermo, CABA</span></p>
+                        <span class="avatar" aria-hidden="true">SM</span>
+                        <div>
+                            <div><span class="pildora">Profesora</span><span class="badge exito"><img class="bi" src="icons/tilde-exito.svg" alt="">Cuenta verificada</span></div>
+                            <h1>Sofía Martínez</h1>
+                            <p class="ubicacion"><span><img class="bi" src="icons/home-suave.svg" alt="">Nacional Buenos Aires y Normal 1</span><span><img class="bi" src="icons/pin-suave.svg" alt="">Palermo, CABA</span></p>
+                        </div>
+                        <aside>
+                            <button type="button" class="boton principal" data-pedir="Sofía Martínez">Pedir clase</button>
+                            <a href="panel.html#chat" class="boton contorno">Enviar mensaje</a>
+                            <div>
+                                <button type="button" class="boton botonIcono" aria-pressed="false" aria-label="Avisarme cuando tenga horarios libres"><img class="bi" src="icons/bell-tinta.svg" alt=""></button>
+                                <a href="panel.html#chat" class="boton botonIcono" aria-label="Escribir por chat"><img class="bi" src="icons/send-tinta.svg" alt=""></a>
+                                <button type="button" class="boton botonIcono" data-copiar-enlace aria-label="Copiar el enlace del perfil"><img class="bi" src="icons/share-tinta.svg" alt=""></button>
+                            </div>
+                        </aside>
                     </div>
-                <div class="perfilAcciones">
-                    <button type="button" class="boton coral" data-pedir="Sofía Martínez">Pedir clase</button>
-                    <a href="panel.html#chat" class="boton borde">Enviar mensaje</a>
-                    <div class="redondos">
-                        <button type="button" aria-pressed="false" aria-label="Avisarme cuando tenga horarios libres"><img class="icono" src="icons/bell-coral.svg" alt=""></button>
-                        <a href="panel.html#chat" class="botonLupa" aria-label="Escribir por chat"><img class="icono" src="icons/send-tinta.svg" alt=""></a>
-                        <button type="button" id="copiarEnlace" aria-label="Copiar enlace del perfil"><img class="icono" src="icons/share-tinta.svg" alt=""></button>
-                    </div>
-                </div>
-                </div>
-                <div class="estadisticas"><div><b>4,9</b><span>Calificación</span></div><div><b>32</b><span>Reseñas</span></div><div><b>58</b><span>Clases dadas</span></div><div><b>124</b><span>Me gusta</span></div><a href="panel.html#historial" class="boton borde">Ver historial de clases</a></div>
-            </section>
-            <div class="perfilCuerpo">
-                <div>
-                    <section class="card sobreMi"><h2>Sobre mí</h2>
+                    <dl><div><dt>Calificación</dt><dd>4,9</dd></div><div><dt>Reseñas</dt><dd>32</dd></div><div><dt>Clases dadas</dt><dd>58</dd></div><div><dt>Me gusta</dt><dd>124</dd></div><a href="panel.html#historial" class="boton contorno chico">Ver historial de clases</a></dl>
+                </header>
+                <div class="cuerpo">
+                    <div>
+                        <div class="card"><h2>Sobre mí</h2>
                         <p>Soy profesora de Matemática y Física con ocho años de experiencia acompañando a chicos de secundaria en el Nacional Buenos Aires y en el Normal 1. Me gusta que cada alumno entienda el porqué de cada ejercicio antes de memorizarlo.</p>
                         <p>Preparo exámenes de ingreso y finales con clases dinámicas, material propio y seguimiento semana a semana.</p>
-                    </section>
-                    <section class="card" id="resenas">
-                        <div class="resenasCabeza"><h2>Reseñas</h2><p class="puntaje"><b>4,9</b><small><span class="estrellasRojas">★★★★★</span>32 reseñas</small></p></div>
-                        <ul class="resenas">
-                            <li><span class="iniciales c2">MR</span><div><p class="quien"><b>Mateo R.</b><span class="estrellasRojas" aria-label="5 de 5 estrellas">★★★★★</span><small>hace 2 días</small></p><p>Aprobé el final de Física que tenía trabado hace dos años. Explica con mucha paciencia y siempre manda ejercicios extra.</p></div></li>
-                            <li><span class="iniciales c3">LP</span><div><p class="quien"><b>Lucía P.</b><span class="estrellasRojas" aria-label="5 de 5 estrellas">★★★★★</span><small>hace 1 semana</small></p><p>Las clases virtuales son súper claras y siempre responde por el chat. Muy recomendable.</p></div></li>
-                            <li><span class="iniciales c1">TG</span><div><p class="quien"><b>Tomás G.</b><span class="estrellasRojas" aria-label="5 de 5 estrellas">★★★★★</span><small>hace 3 semanas</small></p><p>Muy puntual y conoce el programa del colegio de memoria. Me ayudó un montón con Álgebra.</p></div></li>
-                        </ul>
-                        <a href="#resenas" class="boton borde chico">Ver todas las reseñas</a>
-                    </section>
-                </div>
-                <div>
-                    <section class="precio" aria-labelledby="tituloPrecio">
-                        <h2 id="tituloPrecio">Precio por hora</h2>
-                        <p class="monto">$ 9.000 <small>/ hora</small></p>
+                        </div>
+                        <div class="card" id="resenas">
+                            <div><h2>Reseñas</h2><p class="puntaje"><b>4,9</b><small><span class="estrellas" role="img" aria-label="5 de 5 estrellas"><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""></span>32 reseñas</small></p></div>
+                            <ul>
+                            <li class="resena"><span class="avatar celeste">MR</span><div><div><b>Mateo R.</b><span class="estrellas" role="img" aria-label="5 de 5 estrellas"><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""></span><small>hace 2 días</small></div><p>Aprobé el final de Física que tenía trabado hace dos años. Explica con mucha paciencia y siempre manda ejercicios extra.</p></div></li>
+                            <li class="resena"><span class="avatar">LP</span><div><div><b>Lucía P.</b><span class="estrellas" role="img" aria-label="5 de 5 estrellas"><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""></span><small>hace 1 semana</small></div><p>Las clases virtuales son súper claras y siempre responde por el chat. Muy recomendable.</p></div></li>
+                            <li class="resena"><span class="avatar celeste">TG</span><div><div><b>Tomás G.</b><span class="estrellas" role="img" aria-label="5 de 5 estrellas"><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""></span><small>hace 3 semanas</small></div><p>Muy puntual y conoce el programa del colegio de memoria. Me ayudó un montón con Álgebra.</p></div></li>
+                            </ul>
+                            <a href="#resenas" class="boton contorno chico">Ver todas las reseñas</a>
+                        </div>
+                    </div>
+                    <div>
+                    <div class="card oscura">
+                        <h2>Precio por hora</h2>
+                        <p class="precio">$ 9.000 <small>por hora</small></p>
                         <p>Clases de 60 minutos. La primera la coordinás por chat sin compromiso.</p>
-                        <button type="button" class="boton coral ancho" data-pedir="Sofía Martínez">Pedir clase</button>
-                    </section>
-                    <section class="card"><h2>Datos</h2>
-                        <ul class="datosPerfil">
-                            <li><span class="cuadro"><img class="icono" src="icons/home-coral.svg" alt=""></span><div><small>Colegios</small>Colegio Nacional de Buenos Aires · Escuela Normal 1</div></li>
-                            <li><span class="cuadro"><img class="icono" src="icons/gear-coral.svg" alt=""></span><div><small>Materias</small><div class="chips"><span class="etiquetaGris coral">Matemática</span><span class="etiquetaGris">Física</span><span class="etiquetaGris">Álgebra</span></div></div></li>
-                            <li><span class="cuadro"><img class="icono" src="icons/user-coral.svg" alt=""></span><div><small>Niveles</small>Secundario · Universitario (CBC)</div></li>
-                            <li><span class="cuadro"><img class="icono" src="icons/pin-coral.svg" alt=""></span><div><small>Modalidad</small><div class="chips"><span class="insignia">Presencial</span><span class="insignia">Online</span></div></div></li>
-                            <li><span class="cuadro"><img class="icono" src="icons/check-coral.svg" alt=""></span><div><small>Títulos y estudios</small>Profesorado de Matemática (UBA)<br>Tecnicatura en Física Aplicada</div></li>
-                        </ul>
-                    </section>
-                    <a href="soporte.html#contacto" class="reportar"><img class="icono" src="icons/alerta-gris.svg" alt="">Reportar este perfil</a>
+                        <button type="button" class="boton principal" data-pedir="Sofía Martínez">Pedir clase</button>
+                    </div>
+                        <div class="card"><h2>Datos</h2>
+                            <ul class="datos">
+                            <li><span class="icono"><img class="bi" src="icons/home-magenta.svg" alt=""></span><div><small>Colegios</small>Colegio Nacional de Buenos Aires y Escuela Normal 1</div></li>
+                            <li><span class="icono"><img class="bi" src="icons/gear-magenta.svg" alt=""></span><div><small>Materias</small><div><span class="badge coral">Matemática</span><span class="badge">Física</span><span class="badge">Álgebra</span></div></div></li>
+                            <li><span class="icono"><img class="bi" src="icons/user-magenta.svg" alt=""></span><div><small>Niveles</small>Secundario y Universitario (CBC)</div></li>
+                            <li><span class="icono"><img class="bi" src="icons/pin-magenta.svg" alt=""></span><div><small>Modalidad</small><div><span class="badge celeste">Presencial</span><span class="badge celeste">Online</span></div></div></li>
+                            <li><span class="icono"><img class="bi" src="icons/check-magenta.svg" alt=""></span><div><small>Títulos y estudios</small>Profesorado de Matemática (UBA)<br>Tecnicatura en Física Aplicada</div></li>
+                            </ul>
+                        </div>
+                        <a href="soporte.html#contacto" class="enlace reportar"><img class="bi" src="icons/alerta-suave.svg" alt="">Reportar este perfil</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <dialog class="modal" id="modalPedido" aria-labelledby="tituloPedido">
+        </section>
+        <dialog class="dialog" id="dialogoPedirClase" aria-labelledby="tituloPedirClase">
             <form method="dialog">
-                <header>
+                <div class="dialog-header">
                     <div>
-                        <h2 id="tituloPedido">Pedir una clase</h2>
+                        <h2 class="dialog-title" id="tituloPedirClase">Pedir una clase</h2>
                         <p>Elegí cuándo querés tener una clase con <b data-profe>Sofía Martínez</b>. Te avisamos apenas responda.</p>
                     </div>
-                    <button class="cerrar" value="cancelar" aria-label="Cerrar"><img class="icono" src="icons/close-tinta.svg" alt=""></button>
-                </header>
-                <p class="horario"><img class="icono" src="icons/calendar-tinta.svg" alt=""><span>Horario de <span data-profe>Sofía Martínez</span>: mié 16 a 19, sáb 15 a 18, dom 14 a 17</span></p>
-                <h3>Día</h3>
-                <div class="dias">
-                    <button type="button" class="flecha" aria-label="Días anteriores" disabled>‹</button>
-                    <button type="button" disabled aria-pressed="false" aria-label="MAR 3 de noviembre (sin horarios)">MAR<b>3</b>NOV</button><button type="button"  aria-pressed="false" aria-label="MIÉ 4 de noviembre">MIÉ<b>4</b>NOV</button><button type="button" disabled aria-pressed="false" aria-label="JUE 5 de noviembre (sin horarios)">JUE<b>5</b>NOV</button><button type="button" disabled aria-pressed="false" aria-label="VIE 6 de noviembre (sin horarios)">VIE<b>6</b>NOV</button><button type="button"  aria-pressed="false" aria-label="SAB 7 de noviembre">SAB<b>7</b>NOV</button><button type="button"  aria-pressed="false" aria-label="DOM 8 de noviembre">DOM<b>8</b>NOV</button><button type="button" disabled aria-pressed="false" aria-label="LUN 9 de noviembre (sin horarios)">LUN<b>9</b>NOV</button>
-                    <button type="button" class="flecha" aria-label="Días siguientes" disabled>›</button>
+                    <button type="button" class="btn-close" data-cerrar aria-label="Cerrar"><img class="bi" src="icons/close-tinta.svg" alt=""></button>
                 </div>
-                <h3>Hora de inicio</h3>
-                <p class="nota" id="eligeDia">Elegí primero un día</p>
-                <div class="horas" hidden>
-                    <button type="button" disabled aria-label="15:00 ocupado">15:00</button><button type="button" aria-pressed="false">16:00</button><button type="button" aria-pressed="false">17:00</button><button type="button" aria-pressed="false">18:00</button><button type="button" aria-pressed="false">19:00</button><button type="button" disabled aria-label="20:00 ocupado">20:00</button>
+                <div class="dialog-body">
+                    <p class="horario"><img class="bi" src="icons/calendar-tinta.svg" alt=""><span>Horario de <span data-profe>Sofía Martínez</span>: mié 16 a 19, sáb 15 a 18, dom 14 a 17</span></p>
+                    <h3>Día</h3>
+                    <div class="dias"><button type="button" disabled aria-pressed="false" aria-label="mar 3 de noviembre, sin horarios">mar<b>3</b>nov</button><button type="button"  aria-pressed="false" aria-label="mié 4 de noviembre">mié<b>4</b>nov</button><button type="button" disabled aria-pressed="false" aria-label="jue 5 de noviembre, sin horarios">jue<b>5</b>nov</button><button type="button" disabled aria-pressed="false" aria-label="vie 6 de noviembre, sin horarios">vie<b>6</b>nov</button><button type="button"  aria-pressed="false" aria-label="sáb 7 de noviembre">sáb<b>7</b>nov</button><button type="button"  aria-pressed="false" aria-label="dom 8 de noviembre">dom<b>8</b>nov</button><button type="button" disabled aria-pressed="false" aria-label="lun 9 de noviembre, sin horarios">lun<b>9</b>nov</button></div>
+                    <h3>Hora de inicio</h3>
+                    <p class="nota" data-elegir-dia>Elegí primero un día.</p>
+                    <div class="horas" hidden><button type="button" disabled aria-label="15:00, ocupado">15:00</button><button type="button" aria-pressed="false">16:00</button><button type="button" aria-pressed="false">17:00</button><button type="button" aria-pressed="false">18:00</button><button type="button" aria-pressed="false">19:00</button><button type="button" disabled aria-label="20:00, ocupado">20:00</button></div>
+                    <p class="nota">Cada clase dura 60 minutos. Las horas tachadas ya están ocupadas.</p>
+                    <label for="mensajePedido"><h3>Mensaje para el profesor (opcional)</h3></label>
+                    <textarea id="mensajePedido" placeholder="Ej: Tengo prueba de derivadas."></textarea>
+                    <p class="nota">Llega por chat junto con el pedido.</p>
                 </div>
-                <p class="nota">Cada clase dura 60 minutos. Las horas tachadas ya están ocupadas.</p>
-                <h3><label for="mensajePedido">Mensaje para el profesor (opcional)</label></h3>
-                <textarea id="mensajePedido" placeholder="Ej: Tengo prueba de derivadas."></textarea>
-                <p class="nota">Llega por chat junto con el pedido.</p>
-                <footer>
-                    <button class="boton borde" value="cancelar">Cancelar</button>
-                    <button class="boton coral" value="enviar" id="enviarPedido" disabled><img class="icono" src="icons/send-blanco.svg" alt="">Enviar pedido</button>
-                </footer>
+                <div class="dialog-footer">
+                    <button type="button" class="boton contorno chico" data-cerrar>Volver</button>
+                    <button type="submit" class="boton principal chico" value="enviar" disabled><img class="bi" src="icons/send-tinta.svg" alt="">Enviar pedido</button>
+                </div>
             </form>
         </dialog>
-        <p class="toast" role="status" hidden>¡Pedido enviado! Te avisamos cuando el profesor responda.</p>
+        <p class="snackbar" role="status" hidden>Pedido enviado. Te avisamos cuando el profesor responda.</p>
     </main>
 
-    <footer class="piePagina">
+    <footer class="pie">
         <div class="contenedor">
-            <div class="columnas">
+            <div>
                 <div>
-                    <a href="index.html" class="marca"><img src="img/logo.png" alt="">MiProfesor</a>
+                    <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
                     <p>Conectando alumnos y docentes para un aprendizaje sin barreras.</p>
                 </div>
                 <div>
@@ -130,43 +134,8 @@
                     <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
                 </div>
             </div>
-            <p class="legal">© 2026 MiProfesor (MIP) · El conocimiento nos conecta.</p>
+            <p>© 2026 MiProfesor (MIP). El conocimiento nos conecta.</p>
         </div>
     </footer>
-    <script>
-        // Modal "Pedir una clase": se abre desde cualquier botón con data-pedir="Nombre"
-        const modal = document.getElementById('modalPedido');
-        const enviar = document.getElementById('enviarPedido');
-        const horas = modal.querySelector('.horas');
-        const toast = document.querySelector('.toast');
-        const marcar = (grupo, b) => grupo.forEach(o => o.setAttribute('aria-pressed', o === b));
-        document.querySelectorAll('[data-pedir]').forEach(b => b.addEventListener('click', () => {
-            modal.querySelectorAll('[data-profe]').forEach(s => s.textContent = b.dataset.pedir);
-            modal.querySelector('form').reset();
-            modal.querySelectorAll('[aria-pressed]').forEach(o => o.setAttribute('aria-pressed', false));
-            horas.hidden = true; document.getElementById('eligeDia').hidden = false; enviar.disabled = true;
-            modal.showModal();
-        }));
-        const dias = modal.querySelectorAll('.dias button:not(.flecha)');
-        dias.forEach(b => b.addEventListener('click', () => {
-            marcar(dias, b); horas.hidden = false; document.getElementById('eligeDia').hidden = true;
-        }));
-        const botonesHora = horas.querySelectorAll('button');
-        botonesHora.forEach(b => b.addEventListener('click', () => { marcar(botonesHora, b); enviar.disabled = false; }));
-        modal.addEventListener('close', () => {
-            if (modal.returnValue !== 'enviar') return;
-            toast.hidden = false; setTimeout(() => toast.hidden = true, 4000);
-        });
-
-        // Copiar el enlace del perfil público
-        document.getElementById('copiarEnlace').addEventListener('click', e => {
-            const url = new URL('perfil.html', location.href).href;
-            navigator.clipboard?.writeText(url).then(() => e.currentTarget.title = 'Enlace copiado');
-            e.currentTarget.textContent.trim() && (e.currentTarget.textContent = 'Enlace copiado');
-        });
-        document.querySelector('.redondos [aria-pressed]').addEventListener('click', e => {
-            const b = e.currentTarget; b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true');
-        });
-    </script>
 </body>
 </html>

@@ -7,60 +7,61 @@
     <meta name="description" content="Creá tu cuenta gratis en MiProfesor como alumno o profesor.">
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
     <header class="encabezado">
         <div class="contenedor">
             <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
             <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="index.html#para-todos">Quiénes somos</a><a href="soporte.html">Soporte</a></nav>
-            <div class="acciones"><a href="iniciar-sesion.html" class="boton celeste chico">Iniciar Sesión</a><a href="registro.html" class="boton coral chico">Registrarse</a></div>
+            <div class="acciones">
+                <a href="iniciar-sesion.html" class="boton secundario chico">Iniciar sesión</a>
+                <a href="registro.html" class="boton principal chico">Registrarse</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="fondoGris acceso">
+        <section class="acceso">
             <div class="contenedor">
-                <section class="promo">
-                    <div class="logoCaja"><img src="img/logo.png" alt=""></div>
-                    <h1>Aprender nunca debería depender de la suerte</h1>
+                <div class="card coral">
+                    <span class="pegatina" style="--giro:-6deg"><img src="img/logo.png" alt=""></span>
+                    <h2>Aprender nunca debería depender de la suerte</h2>
                     <p>Sumate a la comunidad de MiProfesor y encontrá apoyo con docentes que conocen tu colegio.</p>
-                    <ul><li><img class="icono" src="icons/check-coral.svg" alt="">Profesores de tu propio colegio</li><li><img class="icono" src="icons/check-coral.svg" alt="">Clases presenciales o virtuales</li><li><img class="icono" src="icons/check-coral.svg" alt="">Chat directo para coordinar</li><li><img class="icono" src="icons/check-coral.svg" alt="">Sin intermediarios ni costos ocultos</li></ul>
-                    <figure>
-                        <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
-                        <blockquote>“En una semana ya tenía profe para Física y aprobé el parcial. Lo recomiendo.”</blockquote>
-                        <figcaption>Valentina, 4º año · ORT Belgrano</figcaption>
-                    </figure>
-                </section>
-                <section class="card cajaForm">
-                    <span class="etiqueta rosa">Es gratis y lleva un minuto</span>
+                    <ul><li><img class="bi" src="icons/check-tinta.svg" alt="">Profesores de tu propio colegio</li><li><img class="bi" src="icons/check-tinta.svg" alt="">Clases presenciales o virtuales</li><li><img class="bi" src="icons/check-tinta.svg" alt="">Chat directo para coordinar</li><li><img class="bi" src="icons/check-tinta.svg" alt="">Sin intermediarios ni costos ocultos</li></ul>
+                    <figure><span class="estrellas" role="img" aria-label="5 de 5 estrellas"><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""><img class="bi" src="icons/estrella-coral.svg" alt=""></span><blockquote>“En una semana ya tenía profe para Física y aprobé el parcial. Lo recomiendo.”</blockquote><figcaption>Valentina, 4º año de ORT Belgrano</figcaption></figure>
+                </div>
+                <div class="card">
                     <h1>Creá tu cuenta</h1>
-                    <p>Solo pedimos lo básico. El resto lo completás después, cuando quieras verificar tu cuenta.</p>
-                    <form class="formulario" action="panel.html">
-                        <p class="pasoForm"><span>1</span>¿Cómo vas a usar MiProfesor?</p>
-                        <div class="roles" role="radiogroup" aria-label="Tipo de cuenta">
-                            <label class="rol"><span class="cuadro"><img class="icono" src="icons/user-gris.svg" alt=""></span><span><b>Soy alumno</b><small>Busco un profesor</small></span><input type="radio" name="rol" value="alumno" checked></label>
-                            <label class="rol"><span class="cuadro"><img class="icono" src="icons/message-gris.svg" alt=""></span><span><b>Soy profesor</b><small>Quiero dar clases</small></span><input type="radio" name="rol" value="profesor"></label>
-                        </div>
-                        <p class="pasoForm"><span>2</span>Tus datos</p>
+                    <p>Es gratis y lleva un minuto. Solo pedimos lo básico: el resto lo completás después, cuando quieras verificar tu cuenta.</p>
+                    <form class="formulario" action="panel.html" id="formularioRegistro" novalidate>
+                        <p><span class="avatar oscuro">1</span>¿Cómo vas a usar MiProfesor?</p>
+                        <fieldset>
+                            <legend hidden>Tipo de cuenta</legend>
+                            <label class="rol"><span class="icono"><img class="bi" src="icons/user-magenta.svg" alt=""></span><span>Soy alumno<span>Busco un profesor</span></span><input type="radio" name="rol" value="alumno" checked></label>
+                            <label class="rol"><span class="icono celeste"><img class="bi" src="icons/message-tinta.svg" alt=""></span><span>Soy profesor<span>Quiero dar clases</span></span><input type="radio" name="rol" value="profesor"></label>
+                        </fieldset>
+                        <p><span class="avatar oscuro">2</span>Tus datos</p>
                         <label>Nombre<input type="text" name="nombre" placeholder="Sofía" required autocomplete="given-name"></label>
                         <label>Apellido<input type="text" name="apellido" placeholder="Martínez" required autocomplete="family-name"></label>
                         <label class="ancho">Correo electrónico<input type="email" name="correo" placeholder="nombre@ejemplo.com" required autocomplete="email"></label>
                         <label class="ancho">Contraseña<input type="password" name="clave" placeholder="Creá una contraseña (mínimo 8 caracteres)" minlength="8" required autocomplete="new-password"></label>
                         <label class="ancho">Fecha de nacimiento<input type="date" name="nacimiento" required></label>
                         <label class="casilla ancho"><input type="checkbox" name="terminos" required>Acepto los términos y la política de privacidad</label>
-                        <button type="submit" class="boton coral ancho">Crear mi cuenta</button>
+                        <p class="mensajeError" role="alert"></p>
+                        <button type="submit" class="boton principal">Crear mi cuenta</button>
                         <p class="alternativa">¿Ya tenés cuenta? <a href="iniciar-sesion.html">Iniciá sesión</a></p>
                     </form>
-                </section>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="piePagina">
+    <footer class="pie">
         <div class="contenedor">
-            <div class="columnas">
+            <div>
                 <div>
-                    <a href="index.html" class="marca"><img src="img/logo.png" alt="">MiProfesor</a>
+                    <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
                     <p>Conectando alumnos y docentes para un aprendizaje sin barreras.</p>
                 </div>
                 <div>
@@ -76,12 +77,8 @@
                     <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
                 </div>
             </div>
-            <p class="legal">© 2026 MiProfesor (MIP) · El conocimiento nos conecta.</p>
+            <p>© 2026 MiProfesor (MIP). El conocimiento nos conecta.</p>
         </div>
     </footer>
-    <script>
-        // Desde "Registrarme como profe" se llega con #profesor
-        if (location.hash === '#profesor') document.querySelector('input[value="profesor"]').checked = true;
-    </script>
 </body>
 </html>

@@ -7,39 +7,45 @@
     <meta name="description" content="Encontrá profesores por materia, colegio, modalidad y nivel.">
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
     <header class="encabezado">
         <div class="contenedor">
             <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
             <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="catalogo.html" aria-current="page">Catálogo</a><a href="index.html#para-todos">Quiénes somos</a><a href="soporte.html">Soporte</a></nav>
-            <div class="acciones"><span class="chipUsuario">Alumno • ORT Almagro</span><a href="catalogo.html" class="botonLupa" aria-label="Buscar profesores"><img class="icono" src="icons/search-tinta.svg" alt=""></a><a href="panel.html" class="boton coral chico"><img class="icono" src="icons/chart-blanco.svg" alt=""><span class="texto">Panel de Control</span><span class="contador" aria-label="1 novedad">1</span></a><a href="mi-perfil.html" class="avatar" aria-label="Mi perfil">SM</a></div>
+            <div class="acciones">
+                <span class="pildora">Alumno · ORT Almagro</span>
+                <a href="catalogo.html" class="boton botonIcono" aria-label="Buscar profesores"><img class="bi" src="icons/search-tinta.svg" alt=""></a>
+                <a href="panel.html" class="boton principal chico"><img class="bi" src="icons/chart-tinta.svg" alt=""><span>Panel de Control</span><span class="contador" aria-label="1 novedad">1</span></a>
+                <a href="mi-perfil.html" class="avatar" aria-label="Mi perfil">SM</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="contenedor">
-            <ol class="migas"><li><a href="index.html">Inicio</a></li><li><a href="catalogo.html">Catálogo</a></li><li aria-current="page">Todos los profesores</li></ol>
-            <div class="catalogoCabeza">
+        <section class="cabecera">
+            <div class="contenedor">
+                <ol class="migas"><li><a href="index.html">Inicio</a></li><li><a href="catalogo.html">Catálogo</a></li><li aria-current="page">Todos los profesores</li></ol>
                 <div>
-                    <span class="etiqueta">Catálogo</span>
                     <h1>Encontrá a tu profesor</h1>
                     <p>Filtrá por materia, colegio, modalidad y nivel. Todos los precios son por hora y los ves antes de contactar.</p>
                 </div>
-                <form class="buscaAyuda" role="search" id="buscar" action="catalogo.html">
-                    <img class="icono" src="icons/search-gris.svg" alt="">
-                    <input type="search" name="q" placeholder="Nombre, materia o tema..." aria-label="Buscar profesores">
-                    <button type="submit" class="boton coral">Buscar</button>
+                <form class="buscador" role="search" id="buscar" action="catalogo.html">
+                    <img class="bi" src="icons/search-suave.svg" alt="">
+                    <input type="search" name="busqueda" placeholder="Nombre, materia o tema" aria-label="Buscar profesores">
+                    <button type="submit" class="boton principal chico">Buscar</button>
                 </form>
             </div>
-        </div>
-        <div class="fondoGris">
-            <div class="contenedor catalogo">
-                <form class="card filtrosCard" action="catalogo.html">
-                    <header><h2><img class="icono" src="icons/gear-coral.svg" alt="">Filtros</h2><button type="reset">Limpiar</button></header>
-                    <label class="campo">Materia<select name="materia"><option>Matemática</option><option>Física</option><option>Química</option><option>Biología</option><option>Historia</option><option>Geografía</option><option>Inglés</option><option>Italiano</option></select></label>
-                    <label class="campo">Colegio<select name="colegio"><option>Todos los colegios</option><option>Nacional Buenos Aires</option><option>Carlos Pellegrini</option><option>ORT Almagro</option><option>ORT Belgrano</option><option>Normal 1</option></select></label>
-                    <label class="campo">Modalidad<select name="modalidad"><option>Presencial u online</option><option>Presencial</option><option>Online</option></select></label>
+        </section>
+
+        <section class="catalogo">
+            <div class="contenedor">
+                <form class="card" action="catalogo.html">
+                    <div><h2>Filtros</h2><button type="reset" class="enlace">Limpiar</button></div>
+                    <label>Materia<select name="materia"><option>Matemática</option><option>Física</option><option>Química</option><option>Biología</option><option>Historia</option><option>Geografía</option><option>Inglés</option><option>Italiano</option></select></label>
+                    <label>Colegio<select name="colegio"><option>Todos los colegios</option><option>Nacional Buenos Aires</option><option>Carlos Pellegrini</option><option>ORT Almagro</option><option>ORT Belgrano</option><option>Normal 1</option></select></label>
+                    <label>Modalidad<select name="modalidad"><option>Presencial u online</option><option>Presencial</option><option>Online</option></select></label>
                     <fieldset>
                         <legend>Nivel escolar</legend>
                         <label class="casilla"><input type="checkbox" name="nivel" value="primario">Primario</label>
@@ -47,127 +53,123 @@
                         <label class="casilla"><input type="checkbox" name="nivel" value="universitario">Universitario</label>
                     </fieldset>
                     <fieldset>
-                        <div class="rango"><label for="precio">Precio por hora</label><output for="precio" id="precioValor">hasta $ 12.000</output></div>
+                        <label for="precio">Precio por hora: <output for="precio" id="precioElegido">hasta $ 12.000</output></label>
                         <input type="range" id="precio" name="precio" min="2000" max="20000" step="500" value="12000">
                     </fieldset>
-                    <button type="submit" class="boton coral ancho">Aplicar filtros</button>
+                    <button type="submit" class="boton principal">Aplicar filtros</button>
                 </form>
-                <section aria-labelledby="cantidad">
-                    <div class="resultadosCabeza">
-                        <h2 id="cantidad"><b>24</b> profesores encontrados</h2>
-                        <label>Ordenar por <span class="campo"><select><option>Mejor calificados</option><option>Menor precio</option><option>Mayor precio</option><option>Más clases dadas</option></select></span></label>
+                <div>
+                    <div class="resultados">
+                        <h2>24 profesores encontrados</h2>
+                        <label>Ordenar por <select><option>Mejor calificados</option><option>Menor precio</option><option>Mayor precio</option><option>Más clases dadas</option></select></label>
                     </div>
                     <div class="filtrosActivos">
-                        <button type="button" aria-label="Quitar filtro Matemática">Matemática ×</button>
-                        <button type="button" aria-label="Quitar filtro Secundario">Secundario ×</button>
+                        <button type="button" class="badge" aria-label="Quitar el filtro Matemática">Matemática <img class="bi" src="icons/close-tinta.svg" alt=""></button>
+                        <button type="button" class="badge" aria-label="Quitar el filtro Secundario">Secundario <img class="bi" src="icons/close-tinta.svg" alt=""></button>
                     </div>
-                    <ul class="listaProfes">
-                        <li class="card profe">
+                    <ul>
+                        <li class="card profesorFila">
                             <img src="img/sofia.webp" alt="Foto de Sofía Martínez">
                             <div>
-                                <h3><a href="perfil.html">Sofía Martínez</a> <span class="insignia verde">✓ Verificado</span></h3>
-                                <p class="lugar"><img class="icono" src="icons/home-gris.svg" alt="">Especialista en Nacional Buenos Aires y Normal 1</p>
-                                <div class="chips"><span class="etiquetaGris">Matemática</span><span class="etiquetaGris">Física</span><span class="etiquetaGris">Álgebra</span></div>
+                                <h3><a href="perfil.html">Sofía Martínez</a> <span class="badge exito"><img class="bi" src="icons/tilde-exito.svg" alt="">Verificado</span></h3>
+                                <p><img class="bi" src="icons/home-suave.svg" alt="">Especialista en Nacional Buenos Aires y Normal 1</p>
+                                <div><span class="badge">Matemática</span><span class="badge">Física</span><span class="badge">Álgebra</span></div>
                                 <p>Acompañamiento escolar para nivel secundario y preparación de exámenes finales.</p>
                             </div>
                             <aside>
                                 <small>Modalidad</small>
-                                <span class="insignia">Presencial / Online</span>
-                                <a href="perfil.html" class="boton borde">Ver perfil</a>
-                                <button type="button" class="boton coral" data-pedir="Sofía Martínez">Enviar pedido</button>
+                                <span class="badge celeste">Presencial u online</span>
+                                <a href="perfil.html" class="boton contorno chico">Ver perfil</a>
+                                <button type="button" class="boton principal chico" data-pedir="Sofía Martínez">Enviar pedido</button>
                             </aside>
                         </li>
-                        <li class="card profe">
+                        <li class="card profesorFila">
                             <img src="img/joaquin.webp" alt="Foto de Joaquín Gómez">
                             <div>
-                                <h3><a href="perfil.html">Joaquín Gómez</a> <span class="insignia verde">✓ Verificado</span></h3>
-                                <p class="lugar"><img class="icono" src="icons/home-gris.svg" alt="">Conoce el programa de ORT Belgrano y Almagro</p>
-                                <div class="chips"><span class="etiquetaGris">Historia</span><span class="etiquetaGris">Geografía</span></div>
+                                <h3><a href="perfil.html">Joaquín Gómez</a> <span class="badge exito"><img class="bi" src="icons/tilde-exito.svg" alt="">Verificado</span></h3>
+                                <p><img class="bi" src="icons/home-suave.svg" alt="">Conoce el programa de ORT Belgrano y Almagro</p>
+                                <div><span class="badge">Historia</span><span class="badge">Geografía</span></div>
                                 <p>Clases dinámicas y metodologías de estudio personalizadas para secundarios.</p>
                             </div>
                             <aside>
                                 <small>Modalidad</small>
-                                <span class="insignia">Presencial</span>
-                                <a href="perfil.html" class="boton borde">Ver perfil</a>
-                                <button type="button" class="boton coral" data-pedir="Joaquín Gómez">Enviar pedido</button>
+                                <span class="badge celeste">Presencial</span>
+                                <a href="perfil.html" class="boton contorno chico">Ver perfil</a>
+                                <button type="button" class="boton principal chico" data-pedir="Joaquín Gómez">Enviar pedido</button>
                             </aside>
                         </li>
-                        <li class="card profe">
+                        <li class="card profesorFila">
                             <img src="img/geronimo.webp" alt="Foto de Gerónimo Benavidez">
                             <div>
-                                <h3><a href="perfil.html">Gerónimo Benavidez</a> <span class="insignia verde">✓ Verificado</span></h3>
-                                <p class="lugar"><img class="icono" src="icons/home-gris.svg" alt="">Preparación de exámenes de Bocconi</p>
-                                <div class="chips"><span class="etiquetaGris">Italiano</span><span class="etiquetaGris">Negocios</span></div>
+                                <h3><a href="perfil.html">Gerónimo Benavidez</a> <span class="badge exito"><img class="bi" src="icons/tilde-exito.svg" alt="">Verificado</span></h3>
+                                <p><img class="bi" src="icons/home-suave.svg" alt="">Preparación de exámenes de Bocconi</p>
+                                <div><span class="badge">Italiano</span><span class="badge">Negocios</span></div>
                                 <p>Apoyo integral en italiano y negocios para universitarios.</p>
                             </div>
                             <aside>
                                 <small>Modalidad</small>
-                                <span class="insignia">Online</span>
-                                <a href="perfil.html" class="boton borde">Ver perfil</a>
-                                <button type="button" class="boton coral" data-pedir="Gerónimo Benavidez">Enviar pedido</button>
+                                <span class="badge celeste">Online</span>
+                                <a href="perfil.html" class="boton contorno chico">Ver perfil</a>
+                                <button type="button" class="boton principal chico" data-pedir="Gerónimo Benavidez">Enviar pedido</button>
                             </aside>
                         </li>
-                        <li class="card profe">
+                        <li class="card profesorFila">
                             <img src="img/luciana.webp" alt="Foto de Luciana Hernández">
                             <div>
-                                <h3><a href="perfil.html">Luciana Hernández</a> <span class="insignia verde">✓ Verificado</span></h3>
-                                <p class="lugar"><img class="icono" src="icons/home-gris.svg" alt="">Especialista en Carlos Pellegrini</p>
-                                <div class="chips"><span class="etiquetaGris">Química</span><span class="etiquetaGris">Biología</span></div>
+                                <h3><a href="perfil.html">Luciana Hernández</a> <span class="badge exito"><img class="bi" src="icons/tilde-exito.svg" alt="">Verificado</span></h3>
+                                <p><img class="bi" src="icons/home-suave.svg" alt="">Especialista en Carlos Pellegrini</p>
+                                <div><span class="badge">Química</span><span class="badge">Biología</span></div>
                                 <p>Química y biología con experimentos simples para entender de verdad, no para memorizar.</p>
                             </div>
                             <aside>
                                 <small>Modalidad</small>
-                                <span class="insignia">Online</span>
-                                <a href="perfil.html" class="boton borde">Ver perfil</a>
-                                <button type="button" class="boton coral" data-pedir="Luciana Hernández">Enviar pedido</button>
+                                <span class="badge celeste">Online</span>
+                                <a href="perfil.html" class="boton contorno chico">Ver perfil</a>
+                                <button type="button" class="boton principal chico" data-pedir="Luciana Hernández">Enviar pedido</button>
                             </aside>
                         </li>
                     </ul>
-                    <ol class="paginas" aria-label="Páginas">
-                        <li><a href="#cantidad" aria-label="Página anterior">‹</a></li><li><a href="#cantidad" aria-current="page">1</a></li><li><a href="#cantidad">2</a></li><li><a href="#cantidad">3</a></li><li><a href="#cantidad">4</a></li><li><a href="#cantidad">5</a></li><li><a href="#cantidad">6</a></li><li><a href="#cantidad" aria-label="Página siguiente">›</a></li>
-                    </ol>
-                </section>
+                    <nav aria-label="Páginas"><ol class="paginas">
+                        <li><a href="#buscar" aria-label="Página anterior"><img class="bi" src="icons/izquierda-tinta.svg" alt=""></a></li><li><a href="#buscar" aria-current="page">1</a></li><li><a href="#buscar">2</a></li><li><a href="#buscar">3</a></li><li><a href="#buscar">4</a></li><li><a href="#buscar">5</a></li><li><a href="#buscar">6</a></li><li><a href="#buscar" aria-label="Página siguiente"><img class="bi" src="icons/derecha-tinta.svg" alt=""></a></li>
+                    </ol></nav>
+                </div>
             </div>
-        </div>
-        <dialog class="modal" id="modalPedido" aria-labelledby="tituloPedido">
+        </section>
+        <dialog class="dialog" id="dialogoPedirClase" aria-labelledby="tituloPedirClase">
             <form method="dialog">
-                <header>
+                <div class="dialog-header">
                     <div>
-                        <h2 id="tituloPedido">Pedir una clase</h2>
+                        <h2 class="dialog-title" id="tituloPedirClase">Pedir una clase</h2>
                         <p>Elegí cuándo querés tener una clase con <b data-profe>Sofía Martínez</b>. Te avisamos apenas responda.</p>
                     </div>
-                    <button class="cerrar" value="cancelar" aria-label="Cerrar"><img class="icono" src="icons/close-tinta.svg" alt=""></button>
-                </header>
-                <p class="horario"><img class="icono" src="icons/calendar-tinta.svg" alt=""><span>Horario de <span data-profe>Sofía Martínez</span>: mié 16 a 19, sáb 15 a 18, dom 14 a 17</span></p>
-                <h3>Día</h3>
-                <div class="dias">
-                    <button type="button" class="flecha" aria-label="Días anteriores" disabled>‹</button>
-                    <button type="button" disabled aria-pressed="false" aria-label="MAR 3 de noviembre (sin horarios)">MAR<b>3</b>NOV</button><button type="button"  aria-pressed="false" aria-label="MIÉ 4 de noviembre">MIÉ<b>4</b>NOV</button><button type="button" disabled aria-pressed="false" aria-label="JUE 5 de noviembre (sin horarios)">JUE<b>5</b>NOV</button><button type="button" disabled aria-pressed="false" aria-label="VIE 6 de noviembre (sin horarios)">VIE<b>6</b>NOV</button><button type="button"  aria-pressed="false" aria-label="SAB 7 de noviembre">SAB<b>7</b>NOV</button><button type="button"  aria-pressed="false" aria-label="DOM 8 de noviembre">DOM<b>8</b>NOV</button><button type="button" disabled aria-pressed="false" aria-label="LUN 9 de noviembre (sin horarios)">LUN<b>9</b>NOV</button>
-                    <button type="button" class="flecha" aria-label="Días siguientes" disabled>›</button>
+                    <button type="button" class="btn-close" data-cerrar aria-label="Cerrar"><img class="bi" src="icons/close-tinta.svg" alt=""></button>
                 </div>
-                <h3>Hora de inicio</h3>
-                <p class="nota" id="eligeDia">Elegí primero un día</p>
-                <div class="horas" hidden>
-                    <button type="button" disabled aria-label="15:00 ocupado">15:00</button><button type="button" aria-pressed="false">16:00</button><button type="button" aria-pressed="false">17:00</button><button type="button" aria-pressed="false">18:00</button><button type="button" aria-pressed="false">19:00</button><button type="button" disabled aria-label="20:00 ocupado">20:00</button>
+                <div class="dialog-body">
+                    <p class="horario"><img class="bi" src="icons/calendar-tinta.svg" alt=""><span>Horario de <span data-profe>Sofía Martínez</span>: mié 16 a 19, sáb 15 a 18, dom 14 a 17</span></p>
+                    <h3>Día</h3>
+                    <div class="dias"><button type="button" disabled aria-pressed="false" aria-label="mar 3 de noviembre, sin horarios">mar<b>3</b>nov</button><button type="button"  aria-pressed="false" aria-label="mié 4 de noviembre">mié<b>4</b>nov</button><button type="button" disabled aria-pressed="false" aria-label="jue 5 de noviembre, sin horarios">jue<b>5</b>nov</button><button type="button" disabled aria-pressed="false" aria-label="vie 6 de noviembre, sin horarios">vie<b>6</b>nov</button><button type="button"  aria-pressed="false" aria-label="sáb 7 de noviembre">sáb<b>7</b>nov</button><button type="button"  aria-pressed="false" aria-label="dom 8 de noviembre">dom<b>8</b>nov</button><button type="button" disabled aria-pressed="false" aria-label="lun 9 de noviembre, sin horarios">lun<b>9</b>nov</button></div>
+                    <h3>Hora de inicio</h3>
+                    <p class="nota" data-elegir-dia>Elegí primero un día.</p>
+                    <div class="horas" hidden><button type="button" disabled aria-label="15:00, ocupado">15:00</button><button type="button" aria-pressed="false">16:00</button><button type="button" aria-pressed="false">17:00</button><button type="button" aria-pressed="false">18:00</button><button type="button" aria-pressed="false">19:00</button><button type="button" disabled aria-label="20:00, ocupado">20:00</button></div>
+                    <p class="nota">Cada clase dura 60 minutos. Las horas tachadas ya están ocupadas.</p>
+                    <label for="mensajePedido"><h3>Mensaje para el profesor (opcional)</h3></label>
+                    <textarea id="mensajePedido" placeholder="Ej: Tengo prueba de derivadas."></textarea>
+                    <p class="nota">Llega por chat junto con el pedido.</p>
                 </div>
-                <p class="nota">Cada clase dura 60 minutos. Las horas tachadas ya están ocupadas.</p>
-                <h3><label for="mensajePedido">Mensaje para el profesor (opcional)</label></h3>
-                <textarea id="mensajePedido" placeholder="Ej: Tengo prueba de derivadas."></textarea>
-                <p class="nota">Llega por chat junto con el pedido.</p>
-                <footer>
-                    <button class="boton borde" value="cancelar">Cancelar</button>
-                    <button class="boton coral" value="enviar" id="enviarPedido" disabled><img class="icono" src="icons/send-blanco.svg" alt="">Enviar pedido</button>
-                </footer>
+                <div class="dialog-footer">
+                    <button type="button" class="boton contorno chico" data-cerrar>Volver</button>
+                    <button type="submit" class="boton principal chico" value="enviar" disabled><img class="bi" src="icons/send-tinta.svg" alt="">Enviar pedido</button>
+                </div>
             </form>
         </dialog>
-        <p class="toast" role="status" hidden>¡Pedido enviado! Te avisamos cuando el profesor responda.</p>
+        <p class="snackbar" role="status" hidden>Pedido enviado. Te avisamos cuando el profesor responda.</p>
     </main>
 
-    <footer class="piePagina">
+    <footer class="pie">
         <div class="contenedor">
-            <div class="columnas">
+            <div>
                 <div>
-                    <a href="index.html" class="marca"><img src="img/logo.png" alt="">MiProfesor</a>
+                    <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
                     <p>Conectando alumnos y docentes para un aprendizaje sin barreras.</p>
                 </div>
                 <div>
@@ -183,38 +185,8 @@
                     <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
                 </div>
             </div>
-            <p class="legal">© 2026 MiProfesor (MIP) · El conocimiento nos conecta.</p>
+            <p>© 2026 MiProfesor (MIP). El conocimiento nos conecta.</p>
         </div>
     </footer>
-    <script>
-        // Modal "Pedir una clase": se abre desde cualquier botón con data-pedir="Nombre"
-        const modal = document.getElementById('modalPedido');
-        const enviar = document.getElementById('enviarPedido');
-        const horas = modal.querySelector('.horas');
-        const toast = document.querySelector('.toast');
-        const marcar = (grupo, b) => grupo.forEach(o => o.setAttribute('aria-pressed', o === b));
-        document.querySelectorAll('[data-pedir]').forEach(b => b.addEventListener('click', () => {
-            modal.querySelectorAll('[data-profe]').forEach(s => s.textContent = b.dataset.pedir);
-            modal.querySelector('form').reset();
-            modal.querySelectorAll('[aria-pressed]').forEach(o => o.setAttribute('aria-pressed', false));
-            horas.hidden = true; document.getElementById('eligeDia').hidden = false; enviar.disabled = true;
-            modal.showModal();
-        }));
-        const dias = modal.querySelectorAll('.dias button:not(.flecha)');
-        dias.forEach(b => b.addEventListener('click', () => {
-            marcar(dias, b); horas.hidden = false; document.getElementById('eligeDia').hidden = true;
-        }));
-        const botonesHora = horas.querySelectorAll('button');
-        botonesHora.forEach(b => b.addEventListener('click', () => { marcar(botonesHora, b); enviar.disabled = false; }));
-        modal.addEventListener('close', () => {
-            if (modal.returnValue !== 'enviar') return;
-            toast.hidden = false; setTimeout(() => toast.hidden = true, 4000);
-        });
-
-        // Precio del filtro en vivo
-        const precio = document.getElementById('precio');
-        precio.addEventListener('input', () => document.getElementById('precioValor').textContent = 'hasta $ ' + Number(precio.value).toLocaleString('es-AR'));
-        document.querySelectorAll('.filtrosActivos button').forEach(b => b.addEventListener('click', () => b.remove()));
-    </script>
 </body>
 </html>

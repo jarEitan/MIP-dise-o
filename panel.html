@@ -7,101 +7,107 @@
     <meta name="description" content="Gestioná tus clases y tus mensajes.">
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
     <header class="encabezado">
         <div class="contenedor">
             <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
             <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="index.html#para-todos">Quiénes somos</a><a href="soporte.html">Soporte</a></nav>
-            <div class="acciones"><span class="chipUsuario">Alumno • ORT Almagro</span><a href="catalogo.html" class="botonLupa" aria-label="Buscar profesores"><img class="icono" src="icons/search-tinta.svg" alt=""></a><a href="panel.html" class="boton coral chico"><img class="icono" src="icons/chart-blanco.svg" alt=""><span class="texto">Panel de Control</span><span class="contador" aria-label="1 novedad">1</span></a><a href="mi-perfil.html" class="avatar" aria-label="Mi perfil">SM</a></div>
+            <div class="acciones">
+                <span class="pildora">Alumno · ORT Almagro</span>
+                <a href="catalogo.html" class="boton botonIcono" aria-label="Buscar profesores"><img class="bi" src="icons/search-tinta.svg" alt=""></a>
+                <a href="panel.html" class="boton principal chico"><img class="bi" src="icons/chart-tinta.svg" alt=""><span>Panel de Control</span><span class="contador" aria-label="1 novedad">1</span></a>
+                <a href="mi-perfil.html" class="avatar" aria-label="Mi perfil">SM</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="fondoGris panelControl">
+        <section class="saludo">
             <div class="contenedor">
-                <section class="card bienvenida">
-                    <span class="iniciales grande" aria-hidden="true" style="color:var(--tinta)">SM</span>
-                    <div>
-                        <span class="insignia">Profesora</span>
-                        <h1>¡Hola, Sofía Martínez!</h1>
-                        <p>Gestioná tus clases y tus mensajes.</p>
-                    </div>
-                    <div class="contadores">
-                        <p class="contador2 coral"><b>6</b>Clases activas</p>
-                        <p class="contador2 celeste"><b>60</b>Clases completadas</p>
-                    </div>
-                </section>
+                <span class="avatar" aria-hidden="true">SM</span>
+                <div>
+                    <span class="pildora">Profesora</span>
+                    <h1>¡Hola, Sofía Martínez!</h1>
+                    <p>Gestioná tus clases y tus mensajes.</p>
+                </div>
+                <div class="plancha">
+                    <p class="pegatina coral" style="--giro:-3deg"><b>6</b>Clases activas</p>
+                    <p class="pegatina celeste" style="--giro:2deg"><b>60</b>Clases completadas</p>
+                </div>
+            </div>
+        </section>
 
-                <div class="avisos">
-                    <section class="card">
-                        <h2>Requiere tu acción:</h2>
+        <section class="panel">
+            <div class="contenedor">
+                <div class="grilla2 notificaciones">
+                    <div class="card">
+                        <h2>Requiere tu acción</h2>
                         <ul>
-                            <li><span class="circulo"><img class="icono" src="icons/persona-tinta.svg" alt=""></span><div><p class="titulo3">Solicitud de amistad <small>hace 2 días</small></p><p>Candela Giménez te envió una solicitud de amistad. <a href="perfil.html"><b>Ver perfil</b></a></p><div class="acciones2"><button type="button" class="boton azul">Rechazar</button><button type="button" class="boton coral"><img class="icono" src="icons/tilde-blanco.svg" alt="">Aceptar</button></div></div></li>
-                            <li><span class="circulo"><img class="icono" src="icons/alarm-tinta.svg" alt=""></span><div><p class="titulo3">Nuevo horario propuesto <small>hace 2 días</small></p><p>Martín Acosta te propone dar la clase el 29/10/2026 a las 18:00.</p><div class="acciones2"><a href="#mis-clases" class="boton coral" data-tab="mis-clases">Ver clase</a></div></div></li>
-                            <li><span class="circulo"><img class="icono" src="icons/message-tinta.svg" alt=""></span><div><p class="titulo3">Mensajes sin leer <small>hace 2 días</small></p><p>Lucas Gómez te mandó un mensaje.</p><div class="acciones2"><a href="#chat" class="boton coral" data-tab="chat">Responder</a></div></div></li>
+                            <li><span class="icono celeste"><img class="bi" src="icons/persona-tinta.svg" alt=""></span><div><p>Solicitud de amistad<small>hace 2 días</small></p><p>Candela Giménez te envió una solicitud de amistad. <a href="perfil.html">Ver perfil</a></p><div><button type="button" class="boton contorno chico" data-resolver>Rechazar</button><button type="button" class="boton principal chico" data-resolver><img class="bi" src="icons/tilde-tinta.svg" alt="">Aceptar</button></div></div></li>
+                            <li><span class="icono celeste"><img class="bi" src="icons/alarm-tinta.svg" alt=""></span><div><p>Nuevo horario propuesto<small>hace 2 días</small></p><p>Martín Acosta te propone dar la clase el 29/10/2026 a las 18:00.</p><div><a href="#mis-clases" class="boton principal chico" data-abrir="mis-clases">Ver clase</a></div></div></li>
+                            <li><span class="icono celeste"><img class="bi" src="icons/message-tinta.svg" alt=""></span><div><p>Mensajes sin leer<small>hace 2 días</small></p><p>Lucas Gómez te mandó un mensaje.</p><div><a href="#chat" class="boton principal chico" data-abrir="chat">Responder</a></div></div></li>
                         </ul>
-                    </section>
-                    <section class="card">
-                        <h2>Novedades:</h2>
+                    </div>
+                    <div class="card">
+                        <h2>Novedades</h2>
                         <ul>
-                            <li><span class="circulo"><img class="icono" src="icons/mail-tinta.svg" alt=""></span><div><p class="titulo3">Recibiste una reseña <span class="estrellasRojas">★★★★★</span><small>hace 2 días</small></p><p><b>Mateo R:</b> Aprobé el final de Física que tenía trabado hace dos años. Explica con mucha paciencia y siempre manda ejercicios extra.</p><div class="acciones2"><button type="button" class="boton coral" data-visto>Marcar visto</button></div></div></li>
-                            <li><span class="circulo"><img class="icono" src="icons/teclado-tinta.svg" alt=""></span><div><p class="titulo3">Clase terminada <small>hace 2 horas</small></p><p>Terminó tu clase con Joaquín Gómez. ¿Cómo te fue?</p><div class="acciones2"><a href="perfil.html#resenas" class="boton coral">Dar reseña</a></div></div></li>
-                            <li><span class="circulo"><img class="icono" src="icons/close-tinta.svg" alt=""></span><div><p class="titulo3">Clase cancelada <small>hace 1 día</small></p><p>Lucas canceló la clase del mar 03/11 15:00.</p><div class="acciones2"><a href="#historial" class="boton coral" data-tab="historial">Ver clase</a></div></div></li>
+                            <li><span class="icono celeste"><img class="bi" src="icons/mail-tinta.svg" alt=""></span><div><p>Recibiste una reseña<small>hace 2 días</small></p><p><b>Mateo R.:</b> Aprobé el final de Física que tenía trabado hace dos años. Explica con mucha paciencia y siempre manda ejercicios extra.</p><div><button type="button" class="boton principal chico" data-resolver>Marcar visto</button></div></div></li>
+                            <li><span class="icono celeste"><img class="bi" src="icons/teclado-tinta.svg" alt=""></span><div><p>Clase terminada<small>hace 2 horas</small></p><p>Terminó tu clase con Joaquín Gómez. ¿Cómo te fue?</p><div><a href="perfil.html#resenas" class="boton principal chico">Dar reseña</a></div></div></li>
+                            <li><span class="icono celeste"><img class="bi" src="icons/close-tinta.svg" alt=""></span><div><p>Clase cancelada<small>hace 1 día</small></p><p>Lucas canceló la clase del martes 3/11 a las 15:00.</p><div><a href="#historial" class="boton principal chico" data-abrir="historial">Ver clase</a></div></div></li>
                         </ul>
-                    </section>
+                    </div>
                 </div>
 
-                <div class="pestanas" role="tablist" aria-label="Secciones del panel">
-                    <button type="button" role="tab" id="tab-mis-clases" aria-controls="mis-clases" aria-selected="true">Mis clases <img class="icono" src="icons/calendar-tinta.svg" alt=""></button>
-                    <button type="button" role="tab" id="tab-chat" aria-controls="chat" aria-selected="false">Chat directo <img class="icono" src="icons/message-tinta.svg" alt=""></button>
-                    <button type="button" role="tab" id="tab-historial" aria-controls="historial" aria-selected="false">Historial <img class="icono" src="icons/chevronUp-tinta.svg" alt=""></button>
+                <div role="tablist" aria-label="Secciones del panel">
+                    <button type="button" class="boton" role="tab" id="pestanaClases" aria-controls="mis-clases" aria-selected="true">Mis clases <img class="bi" src="icons/calendar-tinta.svg" alt=""></button>
+                    <button type="button" class="boton" role="tab" id="pestanaChat" aria-controls="chat" aria-selected="false">Chat directo <img class="bi" src="icons/message-tinta.svg" alt=""></button>
+                    <button type="button" class="boton" role="tab" id="pestanaHistorial" aria-controls="historial" aria-selected="false">Historial <img class="bi" src="icons/chevron-tinta.svg" alt=""></button>
                 </div>
 
-                <section class="vista clases" id="mis-clases" role="tabpanel" aria-labelledby="tab-mis-clases">
+                <div id="mis-clases" role="tabpanel" aria-labelledby="pestanaClases">
                     <div class="card calendario">
-                        <header><h3>Octubre 2026</h3><div><button type="button" aria-label="Mes anterior">‹</button><button type="button">HOY</button><button type="button" aria-label="Mes siguiente">›</button></div></header>
-                        <div class="semana" aria-hidden="true"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div>
-                        <ol class="mes"><li class="fuera"><span>28</span><div><i class="ok"></i></div></li><li class="fuera"><span>29</span><div><i class="ok"></i></div></li><li class="fuera"><span>30</span><div></div></li><li><span>1</span><div></div></li><li><span>2</span><div><i class="cancelada"></i></div></li><li><span>3</span><div><i class="ok"></i></div></li><li><span>4</span><div></div></li><li><span>5</span><div></div></li><li><span>6</span><div></div></li><li><span>7</span><div><i class="cancelada"></i></div></li><li><span>8</span><div><i class="espera"></i></div></li><li><span>9</span><div></div></li><li><span>10</span><div></div></li><li><span>11</span><div><i class="ok"></i></div></li><li><span>12</span><div><i class="ok"></i></div></li><li><span>13</span><div></div></li><li><span>14</span><div></div></li><li><span>15</span><div><i class="espera"></i></div></li><li><span>16</span><div></div></li><li><span>17</span><div></div></li><li><span>18</span><div></div></li><li><span>19</span><div></div></li><li><span>20</span><div><i class="ok"></i></div></li><li><span>21</span><div></div></li><li><span>22</span><div></div></li><li><span>23</span><div><i class="ok"></i><i class="espera"></i></div></li><li><span>24</span><div></div></li><li><span>25</span><div><i class="cancelada"></i><i class="cancelada"></i></div></li><li><span>26</span><div><i class="cancelada"></i><i class="cancelada"></i></div></li><li><span>27</span><div><i class="ok"></i></div></li><li><span>28</span><div><i class="ok"></i></div></li><li><span>29</span><div><i class="responder"></i></div></li><li><span>30</span><div><i class="espera"></i></div></li><li><span>31</span><div><i class="ok"></i></div></li><li class="fuera"><span>1</span><div><i class="responder"></i></div></li></ol>
-                        <p class="leyenda"><span><i class="ok"></i>Está bien</span><span><i class="espera"></i>Esperando al otro</span><span><i class="responder"></i>Esperando tu respuesta</span><span><i class="cancelada"></i>Cancelada</span></p>
+                        <div><h3>Octubre 2026</h3><div><button type="button" class="boton contorno chico" aria-label="Mes anterior"><img class="bi" src="icons/izquierda-tinta.svg" alt=""></button><button type="button" class="boton contorno chico">Hoy</button><button type="button" class="boton contorno chico" aria-label="Mes siguiente"><img class="bi" src="icons/derecha-tinta.svg" alt=""></button></div></div>
+                        <ol aria-hidden="true"><li>Lun</li><li>Mar</li><li>Mié</li><li>Jue</li><li>Vie</li><li>Sáb</li><li>Dom</li></ol>
+                        <ol><li class="fuera">28<i class="ok"></i></li><li class="fuera">29<i class="ok"></i></li><li class="fuera">30</li><li>1</li><li>2<i class="cancelada"></i></li><li>3<i class="ok"></i></li><li>4</li><li>5</li><li>6</li><li>7<i class="cancelada"></i></li><li>8<i class="espera"></i></li><li>9</li><li>10</li><li>11<i class="ok"></i></li><li>12<i class="ok"></i></li><li>13</li><li>14</li><li>15<i class="espera"></i></li><li>16</li><li>17</li><li>18</li><li>19</li><li>20<i class="ok"></i></li><li>21</li><li>22</li><li>23<i class="ok"></i><i class="espera"></i></li><li>24</li><li>25<i class="cancelada"></i><i class="cancelada"></i></li><li>26<i class="cancelada"></i><i class="cancelada"></i></li><li>27<i class="ok"></i></li><li>28<i class="ok"></i></li><li>29<i class="responder"></i></li><li>30<i class="espera"></i></li><li>31<i class="ok"></i></li><li class="fuera">1<i class="responder"></i></li></ol>
+                        <dl><div><dt><i class="ok"></i></dt><dd>Está bien</dd></div><div><dt><i class="espera"></i></dt><dd>Esperando al otro</dd></div><div><dt><i class="responder"></i></dt><dd>Esperando tu respuesta</dd></div><div><dt><i class="cancelada"></i></dt><dd>Cancelada</dd></div></dl>
                     </div>
-                    <div class="pendientes">
-                        <h3><span style="color:var(--coral)">!</span> Clases que requieren tu acción <span class="contador">2</span></h3>
+                    <div class="card coral">
+                        <p><img class="bi" src="icons/alerta-tinta.svg" alt="">Clases que requieren tu acción <span class="contador">2</span></p>
                         <ul>
-                            <li><b>Jue 29/10 18:00 · Martín Acosta (Profesor)</b><p>Te proponen este horario.</p><div class="botones2"><button type="button" class="boton coral">Aceptar este horario</button><button type="button" class="boton borde">Rechazar</button><button type="button" class="boton borde">Proponer otro horario</button><a href="#mis-clases" class="boton borde">Ver en calendario</a></div></li>
-                            <li><b>Dom 01/11 15:00 · Olga Giménez (Profesora)</b><p>Te proponen este horario.</p><div class="botones2"><button type="button" class="boton coral">Aceptar este horario</button><button type="button" class="boton borde">Rechazar</button><button type="button" class="boton borde">Proponer otro horario</button><a href="#mis-clases" class="boton borde">Ver en calendario</a></div></li>
+                                <li><b>Jueves 29/10 a las 18:00, Martín Acosta (profesor)</b><p>Te proponen este horario.</p><div><button type="button" class="boton principal chico" data-resolver>Aceptar este horario</button><button type="button" class="boton contorno chico" data-resolver>Rechazar</button><button type="button" class="boton contorno chico" data-resolver>Proponer otro horario</button><a href="#mis-clases" class="boton contorno chico">Ver en calendario</a></div></li>
+                                <li><b>Domingo 1/11 a las 15:00, Olga Giménez (profesora)</b><p>Te proponen este horario.</p><div><button type="button" class="boton principal chico" data-resolver>Aceptar este horario</button><button type="button" class="boton contorno chico" data-resolver>Rechazar</button><button type="button" class="boton contorno chico" data-resolver>Proponer otro horario</button><a href="#mis-clases" class="boton contorno chico">Ver en calendario</a></div></li>
                         </ul>
                     </div>
-                </section>
+                </div>
 
-                <section class="vista" id="chat" role="tabpanel" aria-labelledby="tab-chat" hidden>
-                    <div class="chat">
-                        <ul class="contactos"><li><button type="button" aria-pressed="false" data-foto="img/joaquin.webp"><img src="img/joaquin.webp" alt="">Joaquín Gómez</button></li><li><button type="button" aria-pressed="false" data-foto="img/sofia.webp"><img src="img/sofia.webp" alt="">Sofía Martínez</button></li><li><button type="button" aria-pressed="false" data-foto="img/matias.webp"><img src="img/matias.webp" alt="">Matías Galperín</button></li><li><button type="button" aria-pressed="false" data-foto="img/javier.webp"><img src="img/javier.webp" alt="">Javier Schiaretti</button></li><li><button type="button" aria-pressed="false" data-foto="img/teresa.webp"><img src="img/teresa.webp" alt="">Teresa Lisbon</button></li><li><button type="button" aria-pressed="false" data-foto="img/mia.webp"><img src="img/mia.webp" alt="">Mia Hamm</button></li></ul>
-                        <div class="conversacion">
-                            <header><img src="img/logo.png" alt=""><div><b>Elegí una conversación</b><p>Tus mensajes con profesores y alumnos aparecen acá.</p></div></header>
-                            <ul class="mensajes" aria-live="polite"></ul>
-                            <form class="escribir" hidden><input type="text" placeholder="Escribí un mensaje..." aria-label="Mensaje" required><button type="submit" class="boton coral">Enviar</button></form>
-                        </div>
+                <div id="chat" class="chat" role="tabpanel" aria-labelledby="pestanaChat" hidden>
+                    <ul class="card"><li><button type="button" aria-pressed="false" data-foto="img/joaquin.webp"><img src="img/joaquin.webp" alt="">Joaquín Gómez</button></li><li><button type="button" aria-pressed="false" data-foto="img/sofia.webp"><img src="img/sofia.webp" alt="">Sofía Martínez</button></li><li><button type="button" aria-pressed="false" data-foto="img/matias.webp"><img src="img/matias.webp" alt="">Matías Galperín</button></li><li><button type="button" aria-pressed="false" data-foto="img/javier.webp"><img src="img/javier.webp" alt="">Javier Schiaretti</button></li><li><button type="button" aria-pressed="false" data-foto="img/teresa.webp"><img src="img/teresa.webp" alt="">Teresa Lisbon</button></li><li><button type="button" aria-pressed="false" data-foto="img/mia.webp"><img src="img/mia.webp" alt="">Mia Hamm</button></li></ul>
+                    <div class="card">
+                        <div><img src="img/logo.png" alt=""><div><b>Elegí una conversación</b><p>Tus mensajes con profesores y alumnos aparecen acá.</p></div></div>
+                        <ul aria-live="polite"></ul>
+                        <form hidden><input type="text" placeholder="Escribí un mensaje" aria-label="Mensaje" required><button type="submit" class="boton principal chico">Enviar</button></form>
                     </div>
-                </section>
+                </div>
 
-                <section class="vista" id="historial" role="tabpanel" aria-labelledby="tab-historial" hidden>
-                    <div class="card vacio">
+                <div id="historial" role="tabpanel" aria-labelledby="pestanaHistorial" hidden>
+                    <div class="card estadoVacio">
                         <h3>Todavía no hay clases en tu historial</h3>
                         <p>Las clases completadas, no concretadas y canceladas aparecen acá.</p>
                     </div>
-                </section>
+                </div>
 
-                <p class="ayudaPie">¿Necesitás ayuda con algo?<a href="soporte.html">Ir a soporte</a></p>
+                <p class="ayudaPie">¿Necesitás ayuda con algo? <a href="soporte.html">Ir a soporte</a></p>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="piePagina">
+    <footer class="pie">
         <div class="contenedor">
-            <div class="columnas">
+            <div>
                 <div>
-                    <a href="index.html" class="marca"><img src="img/logo.png" alt="">MiProfesor</a>
+                    <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
                     <p>Conectando alumnos y docentes para un aprendizaje sin barreras.</p>
                 </div>
                 <div>
@@ -117,42 +123,8 @@
                     <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
                 </div>
             </div>
-            <p class="legal">© 2026 MiProfesor (MIP) · El conocimiento nos conecta.</p>
+            <p>© 2026 MiProfesor (MIP). El conocimiento nos conecta.</p>
         </div>
     </footer>
-    <script>
-        // Pestañas: también se abren con #mis-clases, #chat o #historial en la URL
-        const tabs = document.querySelectorAll('[role="tab"]');
-        const abrir = id => tabs.forEach(t => {
-            const activa = t.getAttribute('aria-controls') === id;
-            t.setAttribute('aria-selected', activa);
-            document.getElementById(t.getAttribute('aria-controls')).hidden = !activa;
-        });
-        tabs.forEach(t => t.addEventListener('click', () => abrir(t.getAttribute('aria-controls'))));
-        document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', () => abrir(a.dataset.tab)));
-        const inicial = location.hash.slice(1);
-        if (['mis-clases', 'chat', 'historial'].includes(inicial)) { abrir(inicial); document.querySelector('.pestanas').scrollIntoView(); }
-
-        // Chat: elegir contacto y escribir
-        const contactos = document.querySelectorAll('.contactos button');
-        const cabeza = document.querySelector('.conversacion header');
-        const mensajes = document.querySelector('.mensajes');
-        const escribir = document.querySelector('.escribir');
-        contactos.forEach(b => b.addEventListener('click', () => {
-            contactos.forEach(o => o.setAttribute('aria-pressed', o === b));
-            cabeza.querySelector('img').src = b.dataset.foto;
-            cabeza.querySelector('b').textContent = b.textContent;
-            cabeza.querySelector('p').textContent = 'Todavía no hay mensajes. Escribí el primero.';
-            mensajes.replaceChildren(); escribir.hidden = false; escribir.querySelector('input').focus();
-        }));
-        escribir.addEventListener('submit', e => {
-            e.preventDefault();
-            const li = document.createElement('li'); li.textContent = escribir.querySelector('input').value;
-            mensajes.append(li); escribir.reset();
-        });
-
-        // Botones que resuelven un aviso: lo sacan de la lista
-        document.querySelectorAll('.avisos button, .pendientes button').forEach(b => b.addEventListener('click', () => b.closest('li').remove()));
-    </script>
 </body>
 </html>

@@ -285,7 +285,7 @@ a {
 }
 
 /* Un nombre que lleva al perfil: 44px de toque sin agrandar la línea */
-:is(h3, .resena b) > a {
+:is(h3, .resena b, .plancha b) > a {
     display: inline-block;
     padding-block: .7rem;
     margin-block: -.7rem;
@@ -848,7 +848,7 @@ input[type="range"] {
 .portada .contenedor > div > p {
     max-width: 40rem;
     font-size: clamp(1.15rem, .9rem + .8vw, 1.6rem);
-    line-height: 1.35;
+    line-height: 1.5;
 }
 
 .portada .plancha {
@@ -882,7 +882,8 @@ input[type="range"] {
     object-fit: cover;
 }
 
-.portada .plancha h3 {
+.portada .plancha b {
+    display: block;
     font-size: 1.6rem;
 }
 

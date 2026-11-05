@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MiProfesor · Encontrá al profesor ideal para tu colegio</title>
+    <meta name="description" content="MiProfesor conecta alumnos con docentes que conocen su institución y su programa.">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
+            <nav class="menu" aria-label="Principal">
+                <a href="index.html" aria-current="page">Inicio</a>
+                <a href="#destacados">Catálogo</a>
+                <a href="#para-todos">Quiénes Somos</a>
+                <a href="soporte.html">Soporte</a>
+            </nav>
+            <div class="acciones">
+                <a href="#" class="boton celeste chico">Iniciar Sesión</a>
+                <a href="#" class="boton coral chico">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="contenedor">
+                <div>
+                    <span class="etiqueta"><img class="icono" src="icons/chart-tinta.svg" alt="">Tutorías entre colegios</span>
+                    <h1>Encontrá al profesor ideal <span>para tu colegio.</span></h1>
+                    <p><b>MiProfesor</b> conecta alumnos con docentes que conocen su institución y su programa. Buscá por materia o colegio, coordiná por chat y tomá tus clases presenciales o virtuales.</p>
+                </div>
+
+                <div class="tarjetasHero">
+                    <article class="tarjetaProfe uno">
+                        <div class="cabeza">
+                            <img src="img/sofia.webp" alt="Foto de Sofía Martínez">
+                            <div>
+                                <h3>Sofia Martinez</h3>
+                                <span class="materia">Matemática y Física</span>
+                            </div>
+                        </div>
+                        <p class="descripcion">Acompañamiento escolar para nivel secundario y preparación de exámenes finales.</p>
+                        <div class="pie"><span>Virtual - Flores</span></div>
+                    </article>
+                    <article class="tarjetaProfe dos">
+                        <div class="cabeza">
+                            <img src="img/joaquin.webp" alt="Foto de Joaquín Gómez">
+                            <div>
+                                <h3>Joaquin Gomez</h3>
+                                <span class="materia">Historia y Geografía</span>
+                            </div>
+                        </div>
+                        <p class="descripcion">Clases dinámicas y metodologías de estudio personalizadas para secundarios.</p>
+                        <div class="pie"><span>Presencial - Palermo</span><a href="#" class="boton celeste">Contactar</a></div>
+                    </article>
+                </div>
+
+                <form class="buscador" role="search" action="#">
+                    <input type="search" name="materia" placeholder="¿Qué materia querés aprender? (ej. Matemática)" aria-label="Materia">
+                    <input type="search" name="zona" placeholder="Colegio o Zona" aria-label="Colegio o zona">
+                    <button type="submit" class="boton coral">Buscar</button>
+                </form>
+            </div>
+        </section>
+
+        <div class="franja" aria-hidden="true">
+            <ul>
+                <li>Matemática</li><li>Física</li><li>Química</li><li>Historia</li><li>Geografía</li><li>Inglés</li><li>Biología</li><li>Lengua y Literatura</li><li>Programación</li><li>Economía</li>
+                <li>Matemática</li><li>Física</li><li>Química</li><li>Historia</li><li>Geografía</li><li>Inglés</li><li>Biología</li><li>Lengua y Literatura</li><li>Programación</li><li>Economía</li>
+            </ul>
+        </div>
+
+        <section class="seccion gris">
+            <div class="contenedor">
+                <div class="cabecera">
+                    <span class="etiqueta">Paso a paso</span>
+                    <h2>¿Cómo funciona MiProfesor?</h2>
+                    <p class="bajada">En tres pasos pasás de tener una duda a tener una clase agendada.</p>
+                </div>
+                <ol class="grilla3" style="list-style:none;margin:0;padding:0">
+                    <li class="card paso">
+                        <div class="arriba"><span class="numero n1">1</span><img class="icono" src="icons/user-gris.svg" alt=""></div>
+                        <h3>Creá tu cuenta</h3>
+                        <p>Registrate como alumno o profesor y vinculá tu colegio para recibir recomendaciones personalizadas.</p>
+                    </li>
+                    <li class="card paso">
+                        <div class="arriba"><span class="numero n2">2</span><img class="icono" src="icons/search-gris.svg" alt=""></div>
+                        <h3>Buscá y filtrá</h3>
+                        <p>Explorá el catálogo por materia, nivel, modalidad o institución y compará perfiles, reseñas y precios.</p>
+                    </li>
+                    <li class="card paso">
+                        <div class="arriba"><span class="numero n3">3</span><img class="icono" src="icons/calendar-gris.svg" alt=""></div>
+                        <h3>Coordiná y aprendé</h3>
+                        <p>Reservá tu clase, hablá con el profesor por chat y seguí todo desde tu Panel de Control.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion" id="destacados">
+            <div class="contenedor">
+                <div class="cabecera izquierda">
+                    <div>
+                        <span class="etiqueta rosa">Destacados</span>
+                        <h2>Conectá con docentes listos para ayudarte</h2>
+                        <p class="bajada">Profesores verificados, con reseñas reales de alumnos de tu colegio.</p>
+                    </div>
+                    <a href="#" class="enlace">Ver catálogo completo →</a>
+                </div>
+                <div class="grilla3">
+                    <article class="card destacado coral">
+                        <h3>Sofía Martínez</h3>
+                        <p>Acompañamiento escolar para nivel secundario y preparación de exámenes finales.</p>
+                    </article>
+                    <article class="card destacado celeste">
+                        <h3>Joaquín Gómez</h3>
+                        <p>Clases dinámicas y metodologías de estudio personalizadas para secundarios.</p>
+                    </article>
+                    <article class="card destacado coral">
+                        <h3>Camila Rodríguez</h3>
+                        <p>Apoyo integral en gramática, conversación y exámenes internacionales.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="para-todos">
+            <div class="contenedor">
+                <div class="cabecera">
+                    <span class="etiqueta">Para todos</span>
+                    <h2>Un lugar para aprender y para enseñar</h2>
+                </div>
+                <div class="grilla2">
+                    <article class="panel coral">
+                        <h3>¿Buscás apoyo para el colegio?</h3>
+                        <p>Encontrá la ayuda que necesitás, con profesores que entienden cómo se trabaja en tu colegio.</p>
+                        <ul>
+                            <li><img class="icono" src="icons/check-blanco.svg" alt="">Profesores filtrados por tu institución</li>
+                            <li><img class="icono" src="icons/check-blanco.svg" alt="">Clases presenciales o virtuales</li>
+                            <li><img class="icono" src="icons/check-blanco.svg" alt="">Chat directo para coordinar horarios</li>
+                            <li><img class="icono" src="icons/check-blanco.svg" alt="">Historial de todas tus clases</li>
+                        </ul>
+                        <a href="#" class="boton blanco">Buscar mi profe</a>
+                    </article>
+                    <article class="panel tinta">
+                        <h3>¿Sos profesor particular?</h3>
+                        <p>Enseñá tu pasión, inspirá futuros y conectá con nuevos alumnos en tu zona o colegio.</p>
+                        <ul>
+                            <li><img class="icono" src="icons/check-celeste.svg" alt="">Armá tu perfil con materias y precios</li>
+                            <li><img class="icono" src="icons/check-celeste.svg" alt="">Elegí tus días y horarios</li>
+                            <li><img class="icono" src="icons/check-celeste.svg" alt="">Recibí pedidos de clase al instante</li>
+                            <li><img class="icono" src="icons/check-celeste.svg" alt="">Verificá tu cuenta y ganá confianza</li>
+                        </ul>
+                        <a href="#" class="boton celeste">Registrarme como profe</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion gris">
+            <div class="contenedor">
+                <div class="cabecera">
+                    <span class="etiqueta rosa">Opiniones</span>
+                    <h2>Lo que dicen nuestros alumnos</h2>
+                    <p class="bajada">Reseñas reales de clases tomadas en MiProfesor.</p>
+                </div>
+                <div class="grilla3">
+                    <figure class="card opinion" style="margin:0">
+                        <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <blockquote>“Aprobé el final de Física que tenía trabado hace dos años. Sofía explica con muchísima paciencia.”</blockquote>
+                        <figcaption class="autor"><span class="iniciales c1">MR</span><span><b>Mateo R.</b><small>Alumno · ORT Almagro</small></span></figcaption>
+                    </figure>
+                    <figure class="card opinion" style="margin:0">
+                        <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <blockquote>“Encontré un profe que ya conocía el programa de mi colegio. Las clases virtuales son súper claras.”</blockquote>
+                        <figcaption class="autor"><span class="iniciales c2">LP</span><span><b>Lucía P.</b><small>Alumna · Normal 1</small></span></figcaption>
+                    </figure>
+                    <figure class="card opinion" style="margin:0">
+                        <div class="estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <blockquote>“Reservar es rapidísimo y por el chat coordinamos todo. Ya voy por mi décima clase.”</blockquote>
+                        <figcaption class="autor"><span class="iniciales c3">TG</span><span><b>Tomás G.</b><small>Alumno · Pellegrini</small></span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="llamado">
+            <div class="contenedor">
+                <div class="caja">
+                    <span class="etiqueta">Empezá hoy</span>
+                    <h2>El conocimiento nos conecta</h2>
+                    <p>Creá tu cuenta gratis y encontrá a tu próximo profesor en minutos.</p>
+                    <div class="botones">
+                        <a href="#" class="boton coral">Crear mi cuenta gratis</a>
+                        <a href="#destacados" class="boton celeste">Explorar catálogo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="piePagina">
+        <div class="contenedor">
+            <div class="columnas">
+                <div>
+                    <a href="index.html" class="marca"><img src="img/logo.png" alt="">MiProfesor</a>
+                    <p>Conectando alumnos y docentes para un aprendizaje sin barreras.</p>
+                </div>
+                <div>
+                    <h4>Plataforma</h4>
+                    <ul><li><a href="#">Catálogo</a></li><li><a href="#">Buscar</a></li><li><a href="#">Cuentas</a></li></ul>
+                </div>
+                <div>
+                    <h4>Proyecto</h4>
+                    <ul><li><a href="#">Quiénes somos</a></li><li><a href="soporte.html">Soporte</a></li><li><a href="#">Equipo</a></li></ul>
+                </div>
+                <div>
+                    <h4>Desarrolladores</h4>
+                    <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
+                </div>
+            </div>
+            <p class="legal">© 2026 MiProfesor (MIP) · El conocimiento nos conecta.</p>
+        </div>
+    </footer>
+</body>
+</html>

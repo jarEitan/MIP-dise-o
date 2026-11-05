@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soporte · MiProfesor</title>
+    <meta name="description" content="Centro de ayuda de MiProfesor: preguntas frecuentes y contacto con soporte.">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="index.html" class="marca"><img src="img/logo.png" alt=""><span>Mi<em>Profesor</em></span></a>
+            <nav class="menu" aria-label="Principal">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#destacados">Catálogo</a>
+                <a href="index.html#para-todos">Quiénes somos</a>
+                <a href="soporte.html" aria-current="page">Soporte</a>
+            </nav>
+            <div class="acciones">
+                <span class="chipUsuario">Alumno • ORT Almagro</span>
+                <button type="button" class="botonLupa" aria-label="Buscar usuarios"><img class="icono" src="icons/search-tinta.svg" alt=""></button>
+                <a href="#" class="boton coral chico"><img class="icono" src="icons/chart-blanco.svg" alt=""><span class="texto">Panel de Control</span><span class="contador" aria-label="1 notificación">1</span></a>
+                <span class="avatar" title="Mi perfil">MG</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="heroSoporte">
+            <div class="contenedor">
+                <span class="etiqueta">Centro de ayuda</span>
+                <h1>¿En qué te podemos ayudar hoy?</h1>
+                <p>Buscá tu duda entre las preguntas frecuentes o escribinos: respondemos lo antes posible.</p>
+                <form class="buscaAyuda" role="search" action="#preguntas">
+                    <img class="icono" src="icons/search-gris.svg" alt="">
+                    <input type="search" placeholder="Ej: cancelar una clase..." aria-label="Buscar en la ayuda">
+                    <button type="submit" class="boton coral">Buscar</button>
+                </form>
+            </div>
+        </section>
+
+        <div class="contenedor grilla3 ayudas">
+            <article class="card">
+                <div class="cuadro c1"><img class="icono" src="icons/calendar-coral.svg" alt=""></div>
+                <h3>Gestión de clases</h3>
+                <p>Cancelaciones, reubicaciones y cómo coordinar con tu profesor.</p>
+                <a href="#preguntas" class="enlace">Ver guía →</a>
+            </article>
+            <article class="card">
+                <div class="cuadro c2"><img class="icono" src="icons/search-petroleo.svg" alt=""></div>
+                <h3>Búsqueda y registro</h3>
+                <p>Cómo crear tu cuenta y filtrar profesores por colegio, materia y modalidad.</p>
+                <a href="#preguntas" class="enlace">Ver guía →</a>
+            </article>
+            <article class="card">
+                <div class="cuadro c3"><img class="icono" src="icons/message-tinta.svg" alt=""></div>
+                <h3>Hablar con soporte</h3>
+                <p>¿Algo no funciona? Contanos qué pasó y te ayudamos.</p>
+                <a href="#contacto" class="enlace">Escribirnos →</a>
+            </article>
+        </div>
+
+        <section class="seccion" id="preguntas" style="padding-top:24px">
+            <div class="cabecera">
+                <span class="etiqueta rosa">FAQ</span>
+                <h2>Preguntas frecuentes</h2>
+                <p class="bajada">Pagos, perfiles y dinámica de las clases.</p>
+            </div>
+            <div class="contenedor faq">
+                <div class="filtros" role="group" aria-label="Filtrar por tema">
+                    <button type="button" data-tema="todas" aria-pressed="true">Todas</button>
+                    <button type="button" data-tema="clases" aria-pressed="false">Clases</button>
+                    <button type="button" data-tema="cuenta" aria-pressed="false">Cuenta y registro</button>
+                    <button type="button" data-tema="pagos" aria-pressed="false">Pagos</button>
+                    <button type="button" data-tema="perfiles" aria-pressed="false">Perfiles y verificación</button>
+                </div>
+                <div class="preguntas">
+                    <details data-tema="clases" open>
+                        <summary>¿Cómo puedo cancelar o reubicar una clase?<span class="flecha"><img class="icono" src="icons/chevron-tinta.svg" alt=""></span></summary>
+                        <p>Desde tu Panel de Control, en Administrar clases, elegí la clase y tocá Cancelar o Reubicar. Si falta más de 24 horas se cancela automáticamente; si la clase está próxima, se abre un chat directo con el profesor para acordarlo.</p>
+                    </details>
+                    <details data-tema="cuenta">
+                        <summary>¿Cómo encuentro profesores vinculados a mi colegio?<span class="flecha"><img class="icono" src="icons/chevron-tinta.svg" alt=""></span></summary>
+                        <p>En el Catálogo, filtrá por institución. Si vinculaste tu colegio al registrarte, los profesores que ya trabajan con su programa aparecen primero.</p>
+                    </details>
+                    <details data-tema="cuenta">
+                        <summary>¿Cómo creo una cuenta como alumno o profesor?<span class="flecha"><img class="icono" src="icons/chevron-tinta.svg" alt=""></span></summary>
+                        <p>Tocá Registrarse, elegí si sos alumno o profesor y completá tus datos. Los profesores después pueden sumar materias, precios y horarios desde su perfil.</p>
+                    </details>
+                    <details data-tema="clases">
+                        <summary>¿Las clases son presenciales o virtuales?<span class="flecha"><img class="icono" src="icons/chevron-tinta.svg" alt=""></span></summary>
+                        <p>Las dos. Cada profesor indica en su perfil qué modalidades ofrece y en qué zona da clases presenciales.</p>
+                    </details>
+                    <details data-tema="pagos">
+                        <summary>¿Cuánto cuesta una clase?<span class="flecha"><img class="icono" src="icons/chevron-tinta.svg" alt=""></span></summary>
+                        <p>Cada profesor define su precio por hora y lo ves en su perfil antes de reservar. Crear tu cuenta en MiProfesor es gratis.</p>
+                    </details>
+                    <details data-tema="perfiles">
+                        <summary>¿Cómo sé si un profesor es confiable?<span class="flecha"><img class="icono" src="icons/chevron-tinta.svg" alt=""></span></summary>
+                        <p>Fijate si tiene la insignia de cuenta verificada y leé las reseñas de otros alumnos, que solo pueden dejarse después de tomar una clase.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion gris" id="contacto">
+            <div class="contenedor contacto">
+                <div>
+                    <span class="etiqueta rosa">Contacto</span>
+                    <h2 class="titulo">¿No resolviste tu duda?</h2>
+                    <p class="bajada">Completá el formulario y el equipo de MIP te responde por correo.</p>
+                    <ul class="datos">
+                        <li><span class="cuadro"><img class="icono" src="icons/mail-coral.svg" alt=""></span><span><b>Correo</b><span>soporte@miprofesor.com.ar</span></span></li>
+                        <li><span class="cuadro"><img class="icono" src="icons/alarm-coral.svg" alt=""></span><span><b>Tiempo de respuesta</b><span>Menos de 24 horas hábiles</span></span></li>
+                        <li><span class="cuadro"><img class="icono" src="icons/help-coral.svg" alt=""></span><span><b>Centro de ayuda</b><span>Guías paso a paso para alumnos y profesores</span></span></li>
+                    </ul>
+                </div>
+                <form class="card formulario" id="formContacto">
+                    <label>Nombre completo<input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name"></label>
+                    <label>Correo electrónico<input type="email" name="correo" placeholder="nombre@ejemplo.com" required autocomplete="email"></label>
+                    <label class="ancho">Tipo de consulta
+                        <select name="tipo" required>
+                            <option value="">Elegí una opción</option>
+                            <option>Clases</option>
+                            <option>Cuenta y registro</option>
+                            <option>Pagos</option>
+                            <option>Perfiles y verificación</option>
+                            <option>Otro</option>
+                        </select>
+                    </label>
+                    <label class="ancho">Contanos qué pasó<textarea name="mensaje" rows="1" placeholder="Escribí tu mensaje..." required></textarea></label>
+                    <label class="casilla ancho"><input type="checkbox" name="copia" checked>Quiero recibir una copia en mi correo</label>
+                    <button type="submit" class="boton coral">Enviar consulta</button>
+                    <div class="aviso" role="status" hidden>
+                        <span>¡Gracias! Recibimos tu consulta y te respondemos pronto.</span>
+                        <button type="button" aria-label="Cerrar aviso"><img class="icono" src="icons/close-verde.svg" alt=""></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="piePagina">
+        <div class="contenedor">
+            <div class="columnas">
+                <div>
+                    <a href="index.html" class="marca"><img src="img/logo.png" alt="">MiProfesor</a>
+                    <p>Conectando alumnos y docentes para un aprendizaje sin barreras.</p>
+                </div>
+                <div>
+                    <h4>Plataforma</h4>
+                    <ul><li><a href="index.html#destacados">Catálogo</a></li><li><a href="index.html">Buscar</a></li><li><a href="#">Cuentas</a></li></ul>
+                </div>
+                <div>
+                    <h4>Proyecto</h4>
+                    <ul><li><a href="index.html#para-todos">Quiénes somos</a></li><li><a href="soporte.html">Soporte</a></li><li><a href="#">Equipo</a></li></ul>
+                </div>
+                <div>
+                    <h4>Desarrolladores</h4>
+                    <ul><li>Eitan Ariel Glaz</li><li>Tobias Schatzyki</li><li>Francisco Martínez</li><li>Ariel Chocron</li></ul>
+                </div>
+            </div>
+            <p class="legal">© 2026 MiProfesor (MIP) · El conocimiento nos conecta.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filtro de FAQ por tema
+        const filtros = document.querySelectorAll('.filtros button');
+        filtros.forEach(b => b.addEventListener('click', () => {
+            filtros.forEach(o => o.setAttribute('aria-pressed', o === b));
+            document.querySelectorAll('.preguntas details').forEach(d => {
+                d.hidden = b.dataset.tema !== 'todas' && d.dataset.tema !== b.dataset.tema;
+            });
+        }));
+
+        // shortcut: no hay backend, el envío solo muestra el aviso; conectar a ConsultasController cuando exista.
+        const form = document.getElementById('formContacto');
+        const aviso = form.querySelector('.aviso');
+        form.addEventListener('submit', e => { e.preventDefault(); aviso.hidden = false; form.reset(); });
+        aviso.querySelector('button').addEventListener('click', () => aviso.hidden = true);
+    </script>
+</body>
+</html>
